@@ -13,7 +13,7 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
-.sass-cache
+.sass-cache/*
 
 # =========================
 # Operating System Files
