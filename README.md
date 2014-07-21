@@ -1,13 +1,19 @@
-bdw
+BDW Theme
 ===
 
-learning to make WP themes
---------------------------
+###learning to make WP themes
 
+Learning to create Wordpress themes, and customizations for the greater good.
 
-i can use some help with this, building as i go from random tutorials and books. 
+Currently working though Wordpress Web Design for Dummies, to make basic unstyled theme using compass/sass, and brackets text editor.
 
-list of changes:
+###Change Log:
 
-  *figured out the loop, and get_header/footer/sidebar/etc. 
-  *added widget areas, not sure if done right. 
+* figured out the loop, and get_header/footer/sidebar/etc. 
+* added widget areas, 
+    * not sure if done right. no errors showing in debug log... 
+
+###Planned 
+* Connecting second style sheet from generated sass files.
+* figuring out how to style custom menus.
+* create plugin.
