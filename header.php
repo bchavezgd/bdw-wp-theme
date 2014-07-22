@@ -12,6 +12,7 @@
 		<?php wp_title(); ?>
 	</title>
 	<link /> <!-- font face import --> 
+	<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('stylesheet_directory'); ?>/stylesheets/screen.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('stylesheets_url'); ?>" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<?php if( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>

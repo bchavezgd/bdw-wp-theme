@@ -10,7 +10,7 @@ index.php
 
 <?php get_header(); ?> <!-- body and wrapper still open. -->
 
-	<main class="the_loop">
+	<main class="the_loop wrapper">
 	<?php // begin the_loop  
 		if( have_posts() ) :
 			while( have_posts() ) : the_post(); 
