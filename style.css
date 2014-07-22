@@ -22,6 +22,3 @@ Text Domain:
 BDW is distributed under the terms of the GNU GPL
 
 */
-/* style info written in sass and included on github repository. will be all in Stylesheet folder  /screen.css */
-
-@import: url(stylesheets/screen.css); 
