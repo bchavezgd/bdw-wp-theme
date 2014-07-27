@@ -5,17 +5,22 @@
 	<title>
 		<?php 
 			bloginfo('name'); 
-		?> 
-		<?php if( is_single() ) { ?> 
-			&raquo; Blog Archive 
-		<?php } ?>
-		<?php wp_title(); ?>
+			if(is_single()) 
+				echo "&raquo; Blog Archive";
+			wp_title(); 
+		?>
 	</title>
-	<link /> <!-- font face import --> 
+	<!-- font face import -->  
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+	
+	<!-- stylesheets -->
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('stylesheet_directory'); ?>/stylesheets/screen.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('stylesheets_url'); ?>" />
+	
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-	<?php if( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
+	
+	<?php if( is_singular()) wp_enqueue_script('comment-reply'); ?>
 	<?php wp_head (); ?>
 </head>
 	<body <?php body_class(); ?> >
@@ -23,11 +28,17 @@
 		<header class="site_name">
 			<div>
 				<h1>
-					<a href="<?php bloginfo('url'); ?>" id="site_name"><?php bloginfo('name'); ?></a>
+					<a href="<?php bloginfo('url'); ?>" id="site_name" >
+						<?php bloginfo('name'); ?>
+					</a>
 				</h1>
 				<p>
 					<?php bloginfo('description'); ?>
 				</p>
 			</div>
 		</header>
-	<!-- end header.php -->
+			<nav>
+				<ul>
+					<?php wp_nav_menu(); ?>
+				</ul>
+			</nav>

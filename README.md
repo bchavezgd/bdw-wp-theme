@@ -9,15 +9,16 @@ Currently working though Wordpress Web Design for Dummies, to make basic unstyle
 
 ###Change Log:
 
-* figured out the loop, and get_header/footer/sidebar/etc. 
-* added widget areas, 
-    * not sure if done right. no errors showing in debug log... 
-* Linked to second stylesheet for compass opimization. 
+- figured out the loop, and get_header/footer/sidebar/etc. 
+- added widget areas
+- added `nav_menu` theme support
+- Linked to second stylesheet for compass opimization. 
+- seperated loop into new file. 
+	- `get_template_part('loop');`
+
 
 ###Planned: 
-* Connecting second style sheet from generated sass files.
-* figuring out how to style custom menus.
-* create plugin.
-* add stylesheets for media queries. 
-	* tablet (portrait) 
-	* phone
+- Connecting second style sheet from generated sass files.
+- add stylesheets for media queries. 
+	- tablet (portrait) 
+	- phone
