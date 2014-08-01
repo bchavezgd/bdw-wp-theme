@@ -41,6 +41,18 @@
 				)
 			);
 		}// why are there brackets here but no where else. 
-
+// add support for common post types. 
+	add_theme_support(
+		'post-formats',array(
+			'aside',
+			'chat',
+			'gallery',
+			'image',
+			'link',
+			'quote',
+			'status',
+			'video', 
+			'audio',
+		));
 
 // end functions.php 
