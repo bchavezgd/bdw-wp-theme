@@ -42,8 +42,8 @@
 			);
 		}// why are there brackets here but no where else. 
 // add support for common post types. 
-	add_theme_support(
-		'post-formats',array(
+	add_theme_support('post-formats',
+		  array(
 			'aside',
 			'chat',
 			'gallery',
@@ -54,5 +54,16 @@
 			'video', 
 			'audio',
 		));
-
+// add theme support for thumbnails.
+	add_theme_support('post-thumbnails');
+// custom images sizes
+	add_image_size('custom', 600, 300, true);
+	/* parameter syntax:
+		$name: refer to it in 'has_post_thumbnails'
+		$width: in px
+		$height: in px
+		$crop: boolean, true=resize to specified size, false=crop to specified size. 
+		*/
+/* <?php if(has_post_thumbnail()){the_post_thumbnail('custom'); ?> */
+		
 // end functions.php 

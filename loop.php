@@ -1,18 +1,82 @@
 <?php // begin the_loop  
-		if( have_posts() ) :
-			while( have_posts() ) : the_post(); 
-	?><!-- end php pick up after article tag. -->
-		<hr /> <!-- remove this later -->
-		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+	if( have_posts() ) :
+		while( have_posts() ) : the_post(); 
+?><!-- end php pick up after article tag. -->
+		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 			<a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a>
 			<p class="byline">
 					Posted by: <?php the_author(); ?>
 			</p>
 			<div class="the_content">
-				<?php 
-					the_content();
-					//'Read More...'
-					 
+				<?php // adding custom post classes 
+						if(has_post_format('aside'))
+						{
+							echo the_content();
+						}
+						elseif(has_post_format('chat'))
+						{
+							echo '<h3>';
+							echo the_title();
+							echo '</h3>';
+							echo the_content();
+						}
+						elseif(has_post_format('gallery'))
+						{
+							echo '<h3>';
+							echo the_title();
+							echo '</h3>';
+							echo the_content();
+						}
+						elseif(has_post_format('image')) 
+						{
+							echo '<h3>';
+							echo the_title();
+							echo '</h3>';
+							echo the_post_thumbnail('image-format');
+							echo the_content();
+						}
+						elseif(has_post_format('link'))
+						{
+							echo '<h3>';
+							echo the_title();
+							echo '</h3>';
+							echo the_content();
+						}
+						elseif(has_post_format('quote'))
+						{
+							echo the_content();
+						}
+						elseif(has_post_format('status'))
+						{
+							echo the_content();
+						}
+						elseif(has_post_format('video'))
+						{
+							echo '<h3>';
+							echo the_title();
+							echo '</h3>';
+							echo the_content();
+						}
+						elseif(has_post_format('audio'))
+						{
+							echo '<h3>';
+							echo the_title();
+							echo '</h3>';
+							echo the_content();
+						}
+						else { // if no other post types are present, displays standard post type.
+							echo '<h3>';
+							echo the_title();
+							echo '</h3>';
+							echo the_content();
+						}
+						// adds thumbnails for posts.
+						if(has_post_thumbnail())
+						{
+							the_post_thumbnail('thumbnail');
+						}
+
+					
 				?>
 			</div>
 			<p class="dated">
