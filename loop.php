@@ -3,7 +3,7 @@
 		while( have_posts() ) : the_post(); 
 ?><!-- end php pick up after article tag. -->
 		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-			<a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a>
+			<a href="<?php the_permalink(); ?>"  ><?php the_title(); ?></a>
 			<p class="byline">
 					Posted by: <?php the_author(); ?>
 			</p>
@@ -15,21 +15,21 @@
 						}
 						elseif(has_post_format('chat'))
 						{
-							echo '<h3>';
+							echo '<h3 class="title">';
 							echo the_title();
 							echo '</h3>';
 							echo the_content();
 						}
 						elseif(has_post_format('gallery'))
 						{
-							echo '<h3>';
+							echo '<h3 class="title">';
 							echo the_title();
 							echo '</h3>';
 							echo the_content();
 						}
 						elseif(has_post_format('image')) 
 						{
-							echo '<h3>';
+							echo '<h3 class="title">';
 							echo the_title();
 							echo '</h3>';
 							echo the_post_thumbnail('image-format');
@@ -37,7 +37,7 @@
 						}
 						elseif(has_post_format('link'))
 						{
-							echo '<h3>';
+							echo '<h3 class="title">';
 							echo the_title();
 							echo '</h3>';
 							echo the_content();
@@ -52,20 +52,20 @@
 						}
 						elseif(has_post_format('video'))
 						{
-							echo '<h3>';
+							echo '<h3 class="title">';
 							echo the_title();
 							echo '</h3>';
 							echo the_content();
 						}
 						elseif(has_post_format('audio'))
 						{
-							echo '<h3>';
+							echo '<h3 class="title">';
 							echo the_title();
 							echo '</h3>';
 							echo the_content();
 						}
 						else { // if no other post types are present, displays standard post type.
-							echo '<h3>';
+							echo '<h3 class="title">';
 							echo the_title();
 							echo '</h3>';
 							echo the_content();
