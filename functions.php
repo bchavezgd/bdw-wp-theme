@@ -17,12 +17,14 @@
 		register_sidebar(
 			array(
 				'name' => 'Second Widget Area',
+				'description' => _('Surprise Mother Fucker'),
+				'id' => 'widget02'
 			));
 
 // registers a "nav_menu" to be called into theme customization 
 		register_nav_menu(
 			'primary', __(
-				'Navigation Menu', 'twentythirteen'
+				'Navigation Menu', 'bdw'
 			));
 // create an area in the "customize" section for a nav menu. 
 // adds theme support
@@ -58,12 +60,6 @@
 	add_theme_support('post-thumbnails');
 // custom images sizes
 	add_image_size('custom', 600, 300, true);
-	/* parameter syntax:
-		$name: refer to it in 'has_post_thumbnails'
-		$width: in px
-		$height: in px
-		$crop: boolean, true=resize to specified size, false=crop to specified size. 
-		*/
-/* <?php if(has_post_thumbnail()){the_post_thumbnail('custom'); ?> */
+
 		
 // end functions.php 

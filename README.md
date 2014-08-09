@@ -5,7 +5,7 @@ BDW Theme
 
 Learning to create Wordpress themes, and customizations for the greater good.
 
-Currently working though _Wordpress Web Design for Dummies_, to make basic unstyled theme using compass/sass, and brackets text editor.
+Currently working though books, to make basic unstyled theme using compass/sass, and brackets text editor.
 
 ------
 ##Change Log:
@@ -36,3 +36,11 @@ Currently working though _Wordpress Web Design for Dummies_, to make basic unsty
 - add stylesheets for media queries. 
 	- tablet (portrait) 
 	- phone
+
+---
+## Bugs: 
+### Media Library 
+- not loading any images when trying to add media to a post/page. 
+	- Media library from dashboard works fine when added or editing images. 
+	- deactivated all plugins, nothing changed. 
+	- changed to default twentyfourteen theme, works fine. problem exists in my theme. 
