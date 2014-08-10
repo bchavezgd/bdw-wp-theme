@@ -44,3 +44,10 @@ Currently working though books, to make basic unstyled theme using compass/sass,
 	- Media library from dashboard works fine when added or editing images. 
 	- deactivated all plugins, nothing changed. 
 	- changed to default twentyfourteen theme, works fine. problem exists in my theme. 
+#### fix attempts. 
+1. removed functions.php from root folder of theme, and media library worked fine. 
+	- issue is in functions.php for sure. 
+	- removed comments. 
+	- removed white space. 
+	- rearranged `generic content` section. 
+		- corrected issue. 
