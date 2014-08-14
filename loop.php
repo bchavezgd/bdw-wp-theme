@@ -1,7 +1,7 @@
 <?php // begin the_loop  
 	if( have_posts() ) :
 		while( have_posts() ) : the_post(); 
-?><!-- end php pick up after article tag. -->
+?>
 		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 			<a href="<?php the_permalink(); ?>"  ><?php the_title(); ?></a>
 			<p class="byline">
@@ -65,10 +65,15 @@
 							echo the_content();
 						}
 						else { // if no other post types are present, displays standard post type.
+                         
+                            
 							echo '<h3 class="title">';
+                            echo '<a href="';
+                            echo the_permalink();
+                            echo ' "> ';
 							echo the_title();
-							echo '</h3>';
-							echo the_content();
+							echo '</a></h3>';
+							echo the_excerpt('...');
 						}
 						// adds thumbnails for posts.
 						if(has_post_thumbnail())
