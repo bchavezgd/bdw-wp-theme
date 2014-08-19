@@ -1,17 +1,37 @@
 {
-    "repository" : {
-        "type" : "git",
-        "url" : "http://github.com/bchavezgd/bdw.git"
-        },
-    "name": "bdw",
-    "version": "0.0.1",
-    "devDependencies": {
-        "grunt": "^0.4.5",
-        "grunt-contrib-compass": "^0.9.1",
-        "grunt-contrib-jshint": "~0.10.0",
-        "grunt-contrib-nodeunit": "~0.4.1",
-        "grunt-contrib-sass": "^0.7.4",
-        "grunt-contrib-uglify": "^0.5.1",
-        "grunt-contrib-watch": "^0.6.1"
-    }
+  "name": "BDW-base",
+  "version": "0.1.0",
+  "description": "base theme for WP 4.0",
+  "main": "Gruntfile.js",
+  "dependencies": { },
+  "devDependencies": {
+	"grunt": "^0.4.5",
+	"grunt-contrib-compass": "^0.9.1",
+	"grunt-contrib-concat": "^0.5.0",
+	"grunt-contrib-imagemin": "^0.7.1",
+	"grunt-contrib-jshint": "~0.10.0",
+	"grunt-contrib-nodeunit": "~0.4.1",
+	"grunt-contrib-sass": "^0.7.4",
+	"grunt-contrib-uglify": "^0.5.1",
+	"grunt-contrib-watch": "^0.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bchavezgd/bdw.git"
+  },
+  "keywords": [
+    "base",
+    "theme",
+    "boilerplate",
+    "template"
+  ],
+  "author": "Brian Chavez",
+  "license": "GNU General Public License",
+  "bugs": {
+    "url": "https://github.com/bchavezgd/bdw/issues"
+  },
+  "homepage": "https://github.com/bchavezgd/bdw"
 }
