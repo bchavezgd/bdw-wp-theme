@@ -11,21 +11,27 @@ module.exports = function (grunt) {
 			}
 		},
 		uglify: {},
+		// make a zipfile
 		compress: {
-			prod: {
+			main: {
 				options: {
-					mode: 'zip',
-					archive: '<%= pkg.name %><%= pkg.version %>.zip',
+					archive: '<%= pkg.name %>.<%= pkg.version %>.zip',
+					dest: '..'
 				},
-				files: ['*.php','style.css','js/*.min.js','images/*'],
-				dest: '..'
+				files: [
+					{src: ['*.php','style.css'], dest: '<%= pkg.name %>', filter: 'isFile'}, // includes files in path
+					{src: ['js/*.js','images/**'], dest: '<%= pkg.name %>'}, // includes files in path and its subdirs
+					//{expand: true, cwd: 'path/', src: ['**'], dest: 'internal_folder3/'}, // makes all src relative to cwd
+					//{flatten: true, src: ['path/**'], dest: 'internal_folder4/', filter: 'isFile'} // flattens results to a single level
+					]
 			}
 		},
 		imagemin: {},
 		compass: {
-			dist: {
+			dev: {
 				options: {
-					config: 'config.rb'
+					config: 'sass/config.rb',
+					cssDir: 'lib'
 				}
 			}
 		},
@@ -34,7 +40,7 @@ module.exports = function (grunt) {
 				separator: '\n'
 			},
 			dist: {
-				src: ['stylesheets/wp-banner.css','stylesheets/screen.css'], 
+				src: ['sass/lib/wp-banner.css','sass/lib/screen.css'], 
 				dest: 'style.css'
 			}
 		}

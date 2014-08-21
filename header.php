@@ -15,7 +15,6 @@
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
 	
 	<!-- stylesheets -->
-	<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('stylesheet_directory'); ?>/stylesheets/screen.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('stylesheets_url'); ?>" />
 	
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
