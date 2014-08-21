@@ -11,6 +11,16 @@ module.exports = function (grunt) {
 			}
 		},
 		uglify: {},
+		compress: {
+			prod: {
+				options: {
+					mode: 'zip',
+					archive: '<%= pkg.name %><%= pkg.version %>.zip',
+				},
+				files: ['*.php','style.css','js/*.min.js','images/*'],
+				dest: '..'
+			}
+		},
 		imagemin: {},
 		compass: {
 			dist: {
@@ -41,6 +51,8 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	// watch
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	// zip
+	grunt.loadNpmTasks('grunt-contrib-compress');
 
   // Default task(s).
 	grunt.registerTask('default', ['uglify','compass:dev']);
