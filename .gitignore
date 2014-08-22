@@ -1,6 +1,7 @@
 # project specific files
 .sass-cache/
 node_modules/
+*.zip 
 
 # Windows image file caches
 Thumbs.db
