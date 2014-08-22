@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> >
 <head>
+	
 	<meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>" charset="<?php bloginfo('charset'); ?>" />
+	
 	<title>
 		<?php 
 			bloginfo('name'); 
@@ -10,18 +12,19 @@
 			wp_title(); 
 		?>
 	</title>
+
 	<!-- font face import -->  
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,700' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
-	
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700,300italic|Oswald:400,700' rel='stylesheet' type='text/css'>
+
 	<!-- stylesheets -->
-	<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('stylesheets_url'); ?>" />
+	<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('stylesheet_url'); ?>" />
 	
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	
 	<?php if( is_singular()) wp_enqueue_script('comment-reply'); ?>
 	<?php wp_head (); ?>
 </head>
+	
 	<body <?php body_class(); ?> >
 		<div class="wrapper">
 		<header class="site_name">

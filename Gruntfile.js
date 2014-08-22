@@ -8,6 +8,9 @@ module.exports = function (grunt) {
 			css: {
 				files: 'sass/*.sass',
 				tasks: ['compass','concat']
+			},
+			options: {
+				reload: true
 			}
 		},
 		uglify: {},
@@ -16,11 +19,19 @@ module.exports = function (grunt) {
 			main: {
 				options: {
 					archive: '<%= pkg.name %>.<%= pkg.version %>.zip',
-					dest: '..'
+					cwd: '..'
 				},
 				files: [
-					{src: ['*.php','style.css'], dest: '<%= pkg.name %>', filter: 'isFile'}, // includes files in path
-					{src: ['js/*.js','images/**'], dest: '<%= pkg.name %>'}, // includes files in path and its subdirs
+					{
+						src: ['*.php','style.css'], 
+						dest: '<%= pkg.name %>', 
+						filter: 'isFile'
+					}, // includes files in path
+					{
+						src: ['js/*.js','images/**'],
+						dest: '<%= pkg.name %>'
+					}, // includes files in path and its subdirs
+					
 					//{expand: true, cwd: 'path/', src: ['**'], dest: 'internal_folder3/'}, // makes all src relative to cwd
 					//{flatten: true, src: ['path/**'], dest: 'internal_folder4/', filter: 'isFile'} // flattens results to a single level
 					]
@@ -31,7 +42,7 @@ module.exports = function (grunt) {
 			dev: {
 				options: {
 					config: 'sass/config.rb',
-					cssDir: 'lib'
+					cssDir: 'sass/lib'
 				}
 			}
 		},

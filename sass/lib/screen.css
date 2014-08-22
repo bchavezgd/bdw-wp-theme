@@ -56,14 +56,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* type settings */
+p {
+  margin: 0 0 1.6em 0;
+}
+
+.title {
+  display: block;
+  font: 2rem/3.2rem "oswald", impact, san-serif 700;
+  margin: 0 0 1.5em 0;
+}
+
 /* global settings */
 html {
   min-width: 100%;
   min-height: 100%;
-}
-
-body {
-  font: 16px/25px;
 }
 
 header {
@@ -71,27 +77,3 @@ header {
 }
 
 /* layout */
-.wrapper {
-  color: black;
-}
-
-.site_name {
-  font-family: "open sans", helvetica, arial, san-serif;
-}
-
-.sidebar {
-  display: block;
-}
-
-#side {
-  display: block;
-}
-
-.title {
-  display: block;
-  font: 2rem/3.2rem "oswald", impact, san-serif;
-}
-
-p {
-  font: "open sans", helvetica, arial, san-serif;
-}

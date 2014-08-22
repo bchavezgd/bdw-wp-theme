@@ -1,8 +1,6 @@
 <!-- 
 
 the loop for wordpress. comments will not render into the outputted html files. 
-book suggests to seperate all php requests into seperate lines. 
-but all possible using Echo. 
 
 index.php 
 
@@ -10,6 +8,7 @@ index.php
 
 <?php get_header(); ?> <!-- body and wrapper still open. -->
 	<main class="the_loop wrapper">
+		<hr>
 		<?php get_template_part('loop'); ?>
 	</main>
 <?php	
