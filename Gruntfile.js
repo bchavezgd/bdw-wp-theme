@@ -5,12 +5,12 @@ module.exports = function (grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 	// load plugin options and stuff. 
 		watch: {
-			css: {
-				files: 'sass/*.sass',
+			sass: {
+				files: ['sass/*.scss','sass/*.sass'],
 				tasks: ['compass','concat']
 			},
 			options: {
-				reload: true
+				livereload: true
 			}
 		},
 		uglify: {},
@@ -18,8 +18,7 @@ module.exports = function (grunt) {
 		compress: {
 			main: {
 				options: {
-					archive: '<%= pkg.name %>.<%= pkg.version %>.zip',
-					cwd: '..'
+					archive: '<%= pkg.name %>.<%= pkg.version %>.zip'
 				},
 				files: [
 					{
@@ -73,5 +72,6 @@ module.exports = function (grunt) {
 
   // Default task(s).
 	grunt.registerTask('default', ['uglify','compass:dev']);
+	grunt.registerTask('refresh', ['compass:dev', 'concat:dist']);
 
 };

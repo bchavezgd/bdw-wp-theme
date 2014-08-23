@@ -4,7 +4,7 @@ get_header(); ?>
     <article class="entry" >
         <h3 class="title"><?php the_title(); ?></h3>
        
-        <div class="entry-content">
+        <section class="entry-content">
 			
             <div class="entrybody">
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -28,7 +28,7 @@ get_header(); ?>
                     'link_after'  => '</span>',
                 ) );
             ?>
-	</div><!-- .entry-content -->
+	</section><!-- .entry-content -->
 
     </article>
 <hr>

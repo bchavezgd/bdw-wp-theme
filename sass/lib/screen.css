@@ -55,25 +55,47 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* type settings */
-p {
-  margin: 0 0 1.6em 0;
-}
-
-.title {
-  display: block;
-  font: 2rem/3.2rem "oswald", impact, san-serif 700;
-  margin: 0 0 1.5em 0;
-}
-
 /* global settings */
 html {
   min-width: 100%;
   min-height: 100%;
 }
 
+body {
+  font-size: 16px;
+  line-height: 25px;
+  font-family: "lato", helvetica, arial, san-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 header {
   display: block;
 }
 
+/* type settings */
+h3.title {
+  display: block;
+  font-size: 2em/3em;
+  font-family: "oswald", impact, san-serif;
+  font-weight: 700;
+  margin: 0 0 1.5em 0;
+}
+
+p {
+  margin: 0 0 1.5em 0;
+}
+
 /* layout */
+.wrapper {
+  width: 100%;
+}
+
+article {
+  padding: 3rem;
+}
+
+.entry {
+  width: 60%;
+  max-width: 940px;
+}

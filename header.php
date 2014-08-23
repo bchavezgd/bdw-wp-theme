@@ -14,7 +14,7 @@
 	</title>
 
 	<!-- font face import -->  
-	<link href='http://fonts.googleapis.com/css?family=Lato:400,700,300italic|Oswald:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700,300italic|Source+Code+Pro|Oswald:400,700' rel='stylesheet' type='text/css'>
 
 	<!-- stylesheets -->
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('stylesheet_url'); ?>" />
