@@ -7,7 +7,7 @@
 			<p class="byline">
 					Posted by: <?php the_author(); ?>
 			</p>
-			<div class="the_content">
+			<section class="the_content">
 				<?php // adding custom post classes 
 						if(has_post_format('aside'))
 						{
@@ -83,7 +83,7 @@
 
 					
 				?>
-			</div>
+			</section>
 			<p class="dated">
 				Posted on: <?php echo get_the_date(); ?>, at <?php echo get_the_time(); ?> in <?php the_category(','); ?>
 			</p>
