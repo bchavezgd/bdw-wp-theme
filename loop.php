@@ -1,12 +1,7 @@
 <?php // begin the_loop  
-	if( have_posts() ) :
-		while( have_posts() ) : the_post(); 
+	if( have_posts() ) : while( have_posts() ) : the_post(); 
 ?>
-		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-			<a href="<?php the_permalink(); ?>"  ><?php the_title(); ?></a>
-			<p class="byline">
-					Posted by: <?php the_author(); ?>
-			</p>
+		<hr><article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 			<section class="the_content">
 				<?php // adding custom post classes 
 						if(has_post_format('aside'))
@@ -64,16 +59,13 @@
 							echo '</h3>';
 							echo the_content();
 						}
-						else { // if no other post types are present, displays standard post type.
-                         
-                            
-							echo '<h3 class="title">';
-                            echo '<a href="';
+						else { // if no other post types are present, displays standard post type
+							echo '<h3 class="title"><a href="';
                             echo the_permalink();
                             echo ' "> ';
 							echo the_title();
 							echo '</a></h3>';
-							echo the_excerpt('...');
+							echo the_excerpt();
 						}
 						// adds thumbnails for posts.
 						if(has_post_thumbnail())
@@ -84,9 +76,8 @@
 					
 				?>
 			</section>
-			<p class="dated">
-				Posted on: <?php echo get_the_date(); ?>, at <?php echo get_the_time(); ?> in <?php the_category(','); ?>
-			</p>
+			<p class="byline">Posted by: <?php the_author(); ?></p>
+			<p class="dated">Posted on: <?php echo get_the_date(); ?>, at <?php echo get_the_time(); ?> in <?php the_category(','); ?></p>
 			
 		</article>
 										

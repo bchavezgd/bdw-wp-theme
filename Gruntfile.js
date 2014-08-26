@@ -7,7 +7,7 @@ module.exports = function (grunt) {
 		watch: {
 			sass: {
 				files: ['sass/*.scss','sass/*.sass'],
-				tasks: ['compass','concat']
+				tasks: ['compass:dev','concat:css']
 			},
 			options: {
 				livereload: true
@@ -22,17 +22,19 @@ module.exports = function (grunt) {
 				},
 				files: [
 					{
-						src: ['*.php','style.css'], 
-						dest: '<%= pkg.name %>', 
+						src: ['*.php','style.css'],
+						dest: '<%= pkg.name %>',
 						filter: 'isFile'
 					}, // includes files in path
 					{
 						src: ['js/*.js','images/**'],
 						dest: '<%= pkg.name %>'
-					}, // includes files in path and its subdirs
+					} //, includes files in path and its subdirs
 					
-					//{expand: true, cwd: 'path/', src: ['**'], dest: 'internal_folder3/'}, // makes all src relative to cwd
-					//{flatten: true, src: ['path/**'], dest: 'internal_folder4/', filter: 'isFile'} // flattens results to a single level
+					//{expand: true, cwd: 'path/', src: ['**'], dest: 'internal_folder3/'}, 
+					// makes all src relative to cwd
+					//{flatten: true, src: ['path/**'], dest: 'internal_folder4/', filter: 'isFile'} 
+					// flattens results to a single level
 					]
 			}
 		},
@@ -46,10 +48,7 @@ module.exports = function (grunt) {
 			}
 		},
 		concat: {
-			options: {
-				separator: '\n'
-			},
-			dist: {
+			css: {
 				src: ['sass/lib/wp-banner.css','sass/lib/screen.css'], 
 				dest: 'style.css'
 			}
@@ -67,11 +66,11 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	// watch
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	// zip
+	// compress
 	grunt.loadNpmTasks('grunt-contrib-compress');
 
   // Default task(s).
 	grunt.registerTask('default', ['uglify','compass:dev']);
-	grunt.registerTask('refresh', ['compass:dev', 'concat:dist']);
+	grunt.registerTask('refresh', ['compass:dev', 'concat:css']);
 
 };
