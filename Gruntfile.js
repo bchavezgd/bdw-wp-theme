@@ -10,7 +10,8 @@ module.exports = function (grunt) {
 				tasks: ['compass:dev','concat:css']
 			},
 			options: {
-				livereload: true
+				livereload: true,
+				
 			}
 		},
 		uglify: {},

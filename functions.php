@@ -41,7 +41,7 @@
 // add theme support for thumbnails.
 	add_theme_support('post-thumbnails');
 // custom images sizes
-	add_image_size('custom', 600, 300, true);
+	add_image_size('custom', 300, 200, true);
 // creating custom post types. 
 //defaults to single.php, need to add single-generic-content.php to for custom template. 
 	add_action('init','create_post_type');

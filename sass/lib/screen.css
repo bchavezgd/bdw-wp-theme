@@ -59,12 +59,16 @@ template {
  *    `em` units.
  */
 html {
-  font-family: sans-serif;
+  font-family: "lato", helvetica, arial, san-serif;
   /* 1 */
+  font-size: 100%;
+  /* 3 */
   -ms-text-size-adjust: 100%;
   /* 2 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
+  /* Establish a vertical rhythm unit using $base-line-height. */
+  line-height: 1.375em;
 }
 
 /**
@@ -103,15 +107,64 @@ a:hover {
    Typography
    ========================================================================== */
 /**
+ * Set 1 unit of vertical rhythm on the top and bottom margin.
+ */
+p,
+pre {
+  margin: 1.375em 0;
+}
+
+blockquote {
+  /* Set 1 unit of vertical rhythm on the top and bottom margin. */
+  margin: 1.375em 3rem;
+}
+
+/**
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari 5, and Chrome.
  */
 h1 {
   /* Set the font-size and line-height while keeping a proper vertical rhythm. */
-  font-size: 2em;
+  font-size: 4.8541em;
+  line-height: 1.13306em;
   /* Set 1 unit of vertical rhythm on the top and bottom margins. */
-  margin-top: 0.75em;
-  margin-bottom: 0.75em;
+  margin-top: 0.28327em;
+  margin-bottom: 0.28327em;
+}
+
+h2 {
+  font-size: 3.23607em;
+  line-height: 1.2747em;
+  margin-top: 0.4249em;
+  margin-bottom: 0.4249em;
+}
+
+h3 {
+  font-size: 1.61803em;
+  line-height: 1.69959em;
+  margin-top: 0.8498em;
+  margin-bottom: 0.8498em;
+}
+
+h4 {
+  font-size: 1em;
+  line-height: 1.375em;
+  margin-top: 1.375em;
+  margin-bottom: 1.375em;
+}
+
+h5 {
+  font-size: 0.61803em;
+  line-height: 2.2248em;
+  margin-top: 2.2248em;
+  margin-bottom: 2.2248em;
+}
+
+h6 {
+  font-size: 0.67em;
+  line-height: 2.05224em;
+  margin-top: 2.05224em;
+  margin-bottom: 2.05224em;
 }
 
 /**
@@ -208,6 +261,36 @@ sub {
 /* ==========================================================================
    Lists
    ========================================================================== */
+/**
+ * Address margins set differently in IE 6/7.
+ */
+dl,
+menu,
+ol,
+ul {
+  margin: 1.375em 0;
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin: 0;
+}
+
+dd {
+  margin: 0 0 0 3rem;
+}
+
+/**
+ * Address paddings set differently in IE 6/7.
+ */
+menu,
+ol,
+ul {
+  padding: 0 0 0 3rem;
+}
+
 /* ==========================================================================
    Embedded content
    ========================================================================== */
@@ -247,16 +330,16 @@ fieldset {
   border-color: #c0c0c0;
   border-top-style: solid;
   border-top-width: 0.0625em;
-  padding-top: 0.4625em;
+  padding-top: 0.41875em;
   border-bottom-style: solid;
   border-bottom-width: 0.0625em;
-  padding-bottom: 0.9125em;
+  padding-bottom: 0.83125em;
   border-left-style: solid;
   border-left-width: 0.0625em;
-  padding-left: 0.875em;
+  padding-left: 0.79688em;
   border-right-style: solid;
   border-right-width: 0.0625em;
-  padding-right: 0.875em;
+  padding-right: 0.79688em;
 }
 
 /**
@@ -425,16 +508,9 @@ header {
 }
 
 /* type settings */
-h3.title {
-  display: block;
-  font-size: 2em/3em;
+.title {
   font-family: "oswald", impact, san-serif;
   font-weight: 700;
-  margin: 0 0 1.5em 0;
-}
-
-p {
-  margin: 0 0 1.5em 0;
 }
 
 /* layout */

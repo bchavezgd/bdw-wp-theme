@@ -5,7 +5,7 @@ This is a template_part. to call into other files use command
 	get_template_part('slug','name'); 
 
 to call this template part use. 
-	get_template part('loop','main');
+	get_template part('loop','categories');
 
 -->
 <?php   
