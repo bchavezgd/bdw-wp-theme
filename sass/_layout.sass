@@ -1,8 +1,24 @@
 // layout
 .wrapper
 	width: 100% 
-article
-	padding: 3rem
 .entry
-	width: 60%
-	max-width: 940px
+	width: 61%
+	max-width: 66rem
+	min-width: 33rem
+.clear
+	clear: both
+.cf 
+	zoom: 1 /* For IE 6/7 (trigger hasLayout) */
+	&:after 
+		clear: both
+	&:before, &:after 
+		content: ""
+		display: table
+
+	
+section.content
+	img
+		margin: 0.25rem
+	&:last-child
+		border-bottom: 3px
+		padding-bottom: 4rem
