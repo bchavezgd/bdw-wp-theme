@@ -8,8 +8,8 @@
 				'description'	 =>  _('The primary widget area'),
 				'before_widget'	 => '<li id="%1$s" class="widget-container %2$s">',
 				'after_widget'	 => '</li>',
-				'before_title'	 => '<h3 class="widget-title">',
-				'after_title'	 => '</h3>', 
+				'before_title'	 => '<h4 class="widget-title">',
+				'after_title'	 => '</h4>', 
 			)// end array
 		)// end register sidebar
 	; // endif 
@@ -46,11 +46,11 @@
 //defaults to single.php, need to add single-generic-content.php to for custom template. 
 	add_action('init','create_post_type');
 		function create_post_type(){
-			register_post_type('generic-content', 
+			register_post_type('Markdown', 
 				array(
 					'labels' => array(
-						'name' => __('Generic Content'),
-						'singular_name' => __('Generic Content')
+						'name' => __('Markdown'),
+						'singular_name' => __('markdown')
 						),
 					'public' => true
 				)

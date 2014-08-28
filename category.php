@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 <hr><main>
-<h2>this is the cars category</h2>
+<h4>this is the <?php echo the_category(); ?> category</h4>
 	<?php // loop
 		if(have_posts()):while(have_posts()):the_post(); ?>
 			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 	 			<div class="content">
 					<a href="<?php the_permalink(); ?>">
-						<?php the_post_thumbnail(); ?>
+						<?php the_post_thumbnail('small'); ?>
 					</a>
 				</div><!-- end content -->
 			</div><!-- end post_class -->

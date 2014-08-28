@@ -13,7 +13,7 @@ rewind_posts();
 
 // arguments for new wp loop
 $args = array(
-	'category_name'=>'stuff',
+	'category_name'=>'Featured',
 	'showposts'=>'3'
 );
 $new_loop = new WP_Query($args);
