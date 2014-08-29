@@ -7,7 +7,7 @@ module.exports = function (grunt) {
 		watch: {
 			sass: {
 				files: ['sass/*.scss','sass/*.sass'],
-				tasks: ['compass:dev', 'autoprefixer:css', 'concat:css']
+				tasks: ['compass:dev','concat:css']
 			},
 			options: {
 				livereload: true,
@@ -57,14 +57,8 @@ module.exports = function (grunt) {
 		},
 		concat: {
 			css: {
-				src: ['sass/lib/wp-banner.css','sass/lib/prefixed.css'], 
+				src: ['sass/lib/wp-banner.css','sass/lib/screen.css'], 
 				dest: 'style.css'
-			}
-		},
-		autoprefixer: {
-			css: {
-				src: ['sass/lib/screen.css'],
-				dest: 'sass/lib/prefixed.css'
 			}
 		}
 	});
@@ -82,8 +76,6 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	// compress
 	grunt.loadNpmTasks('grunt-contrib-compress');
-	// prefixer
-	grunt.loadNpmTasks('grunt-autoprefixer');
 
   // Default task(s).
 	grunt.registerTask('default', ['uglify','compass:dev']);

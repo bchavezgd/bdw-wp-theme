@@ -225,6 +225,7 @@ dfn {
  * Address differences between Firefox and other browsers.
  */
 hr {
+  -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
@@ -458,6 +459,7 @@ html input[disabled] {
  */
 input[type="checkbox"],
 input[type="radio"] {
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
@@ -473,6 +475,7 @@ input[type="radio"] {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
+  -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   /* 2 */
@@ -684,13 +687,10 @@ kbd {
   border-right-colors: none;
   border-top-colors: none;
   background-color: #dddddd;
-  background-image: -webkit-linear-gradient(#f1f1f1, #dddddd);
   background-image: linear-gradient(#f1f1f1, #dddddd);
   background-repeat: repeat-x;
   border-color: #dddddd #cccccc #cccccc #dddddd;
-  -webkit-border-image: none;
-       -o-border-image: none;
-          border-image: none;
+  border-image: none;
   border-radius: 2px 2px 2px 2px;
   border-style: solid;
   border-width: 1px;
