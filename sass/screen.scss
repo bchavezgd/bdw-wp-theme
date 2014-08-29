@@ -1,0 +1,88 @@
+// Variables and Imports
+
+// normalize vars
+
+
+// type
+$bodyCopy: 'lato', helvetica, arial, san-serif;
+$headline: 'oswald', impact, san-serif;
+$mono: 'Source Code Pro', monospace, serif;
+$phi: 1.61803398875;
+
+// for normalize vertical rhythm
+// The base font size.
+$base-font-size: 16px;
+$base-line-height: 25px;
+$rhythm-unit: "rem";
+
+
+// headline sizes
+$h1-font-size: $phi(3 * $base-font-size);
+$h2-font-size: $phi(2.5  * $base-font-size);
+$h3-font-size:$phi(2  * $base-font-size);
+$h4-font-size: $phi * $base-font-size;
+$h5-font-size: $base-font-size;
+$h6-font-size: (1/$phi) * $base-font-size;
+
+$indent-amount: 4rem;
+
+// Set this to true to force CSS output to exactly match normalize.css.
+$strict-normalize: false;
+
+// The default font family.
+$base-font-family: $bodyCopy;
+  // Optional map of minimum browser versions to support. For example, to
+  // remove support for IE 7 and earlier, set $browser-minimum-versions['ie']
+  // to '8'.
+
+  $browser-minimum-versions: (
+    //'ie':      8,
+  );
+
+
+// To work around a bug in compass-core 1.0.0-alpha.17, we override Compass'
+// support-legacy-browser() function with a version of our own.
+// @TODO Remove this monkey patch after it's fixed in Compass.
+// @see https://github.com/chriseppstein/compass/pull/1524
+// @see also https://github.com/chriseppstein/compass/pull/1520
+
+/*
+@function support-legacy-browser($browser, $min-version, $max-version: null, $threshold: $critical-usage-threshold) {
+  @if not index($supported-browsers, $browser) {
+    @return false;
+  }
+  // Check against declared minimums.
+  $min-required-version: map-get($browser-minimum-versions, $browser);
+  @if $min-required-version {
+    @return compare-browser-versions($browser, $max-version or $min-version, $min-required-version) >= 0;
+  } @else {
+    // Check against usage stats.
+    $usage: if($max-version,
+               omitted-usage($browser, $min-version, $max-version),
+               omitted-usage($browser, $min-version));
+    @return $usage > $threshold;
+  }
+}*/
+
+/* reset */
+
+@import "compass/support";
+@import "compass/css3/box-sizing";
+@import "compass/typography/vertical_rhythm";
+
+//variables
+//@import 'vars'
+@import 'normalize';
+
+/* global settings */
+@import 'global';
+
+/* type settings */
+@import 'type';
+
+/* layout */
+@import 'layout';
+
+/* article */
+@import 'article';
+

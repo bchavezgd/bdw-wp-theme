@@ -17,7 +17,7 @@ module.exports = function (grunt) {
 		uglify: {},
 		// make a zipfile
 		compress: {
-			main: {
+			prod: {
 				options: {
 					archive: '<%= pkg.name %>.<%= pkg.version %>.zip'
 				},
@@ -45,7 +45,14 @@ module.exports = function (grunt) {
 				options: {
 					config: 'sass/config.rb',
 					cssDir: 'sass/lib'
+				},
+			prod: {
+				options: {
+					config: 'sass/config.rb',
+					cssDir: 'sass/lib',
+					outputStyle: 'compact'
 				}
+			}
 			}
 		},
 		concat: {
@@ -81,5 +88,6 @@ module.exports = function (grunt) {
   // Default task(s).
 	grunt.registerTask('default', ['uglify','compass:dev']);
 	grunt.registerTask('refresh', ['compass:dev', 'concat:css']);
+	grunt.registerTask('done', ['compass:prod', 'autoprefixer', 'concat', 'compress:prod'])
 
 };
