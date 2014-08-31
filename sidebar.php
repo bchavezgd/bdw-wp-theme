@@ -6,8 +6,11 @@
 			   !dynamic_sidebar('Sidebar') ) : 
 			endif;
 		?>  
-		<?php if (!dynamic_sidebar('Primary Widget Area')) : ?>
-		<?php endif; ?>
+		<?php 
+			if (!dynamic_sidebar('Primary Widget Area'));
+			if (!dynamic_sidebar('Surprise Mother Fucker'));
+			
+		?>
 	</ul>
 </aside>
 <!-- end sidebar -->

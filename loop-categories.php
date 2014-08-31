@@ -28,7 +28,7 @@ $new_loop = new WP_Query($args);
 					Posted by: <?php the_author(); ?>
 			</p>
 			<p class="dated">
-				Posted on: <?php echo get_the_date(); ?>, at <?php echo get_the_time(); ?> in <?php the_category(','); ?>
+				Posted on: <?php echo get_the_date(); ?>, at <?php echo get_the_time(); ?> in <?php the_category(', '); ?>
 			</p>
 			<div class="the_content">
 				<?php the_content(); ?>
@@ -39,7 +39,7 @@ $new_loop = new WP_Query($args);
 		<?php	
 			next_posts_link('&laquo; Previous Entries');
 			previous_posts_link('Next Entries &laquo;');
-			else : 
+			else () 
 		?>
 				<p>Not Found</p>
 				<p>sorry blah blah blah, whatever you're looking for doesn't exist</p>

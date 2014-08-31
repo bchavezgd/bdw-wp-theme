@@ -16,9 +16,13 @@
 // creates second widget
 	register_sidebar(
 			array(
-				'name' => 'Second Widget Area',
+				'name' => 'Surprise Mother Fucker',
 				'description' => _('Surprise Mother Fucker'),
-				'id' => 'widget02'
+				'id' => 'widget02',
+				'before_widget' => '<li id="%1s" class="widget-container %2s">',
+				'after_widget' => '</li>',
+				'before_title' => '<h4 class="widget-title">',
+				'after_title' => '</h4>',
 			));
 // registers a "nav_menu" to be called into theme customization 
 	register_nav_menu('primary', __('Navigation Menu', 'bdw'));
@@ -46,13 +50,38 @@
 //defaults to single.php, need to add single-generic-content.php to for custom template. 
 	add_action('init','create_post_type');
 		function create_post_type(){
+			register_post_type('portfolio', 
+				array(
+					'labels' => array(
+						'name' => __('portfolio'),
+						'singular_name' => __('portfolio')
+						),
+					'public' => true,
+					'has_archive' => true, 
+				)
+			);
 			register_post_type('generic-content', 
 				array(
 					'labels' => array(
-						'name' => __('Generic Content'),
-						'singular_name' => __('Generic Content')
+						'name' => __('generic content'),
+						'singular_name' => __('generic content')
 						),
-					'public' => true
+					'public' => true,
+					'has_archive' => true, 
 				)
 			);
 		}
+/*
+		function create_post_type(){
+			register_post_type('generic-content', 
+				array(
+					'labels' => array(
+						'name' => __('generic content'),
+						'singular_name' => __('generic content')
+						),
+					'public' => true,
+					'has_archive' => true, 
+				)
+			);
+		}
+		*/

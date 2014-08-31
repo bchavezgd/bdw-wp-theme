@@ -14,13 +14,13 @@ $rhythm-unit: "rem";
 
 
 // headline sizes
-$h1-font-size: 2 * $phi * $base-font-size;
+$h1-font-size: 3 * $phi * $base-font-size;
 $h2-font-size: 2 * $phi * $base-font-size;
-$h3-font-size: 1.25 * $phi * $base-font-size;
-$h4-font-size: 1.25 * $phi * $base-font-size;
+$h3-font-size: 1.5 * $phi * $base-font-size;
+$h4-font-size: 1.5 * $phi * $base-font-size;
 $h5-font-size: $base-font-size;
 $h6-font-size: $base-font-size;
-$indent-amount: 4rem;
+$indent-amount: 2rem;
 
 // Set this to true to force CSS output to exactly match normalize.css.
 $strict-normalize: false;
@@ -46,7 +46,7 @@ $base-font-family: $bodyCopy;
 // @see https://github.com/chriseppstein/compass/pull/1524
 // @see also https://github.com/chriseppstein/compass/pull/1520
 
-/*
+
 @function support-legacy-browser($browser, $min-version, $max-version: null, $threshold: $critical-usage-threshold) {
   @if not index($supported-browsers, $browser) {
     @return false;
@@ -62,7 +62,7 @@ $base-font-family: $bodyCopy;
                omitted-usage($browser, $min-version));
     @return $usage > $threshold;
   }
-}*/
+}
 
 /* reset */
 

@@ -23,23 +23,6 @@ BDW is distributed under the terms of the GNU GPL
 
 */
 
-/*
-@function support-legacy-browser($browser, $min-version, $max-version: null, $threshold: $critical-usage-threshold) {
-  @if not index($supported-browsers, $browser) {
-    @return false;
-  }
-  // Check against declared minimums.
-  $min-required-version: map-get($browser-minimum-versions, $browser);
-  @if $min-required-version {
-    @return compare-browser-versions($browser, $max-version or $min-version, $min-required-version) >= 0;
-  } @else {
-    // Check against usage stats.
-    $usage: if($max-version,
-               omitted-usage($browser, $min-version, $max-version),
-               omitted-usage($browser, $min-version));
-    @return $usage > $threshold;
-  }
-}*/
 /* reset */
 /* Base
    ========================================================================== */
@@ -172,7 +155,7 @@ strong {
  * Set 1 unit of vertical rhythm on the top and bottom margin.
  */
 blockquote {
-  margin: 1.5625rem 4rem;
+  margin: 1.5625rem 2rem;
 }
 
 /**
@@ -199,10 +182,10 @@ dfn {
  */
 h1 {
   /* Set the font-size and line-height while keeping a proper vertical rhythm. */
-  font-size: 52px;
-  font-size: 3.23607rem;
-  line-height: 75px;
-  line-height: 4.6875rem;
+  font-size: 78px;
+  font-size: 4.8541rem;
+  line-height: 100px;
+  line-height: 6.25rem;
   /* Set 1 unit of vertical rhythm on the top and bottom margins. */
   margin-top: 25px;
   margin-top: 1.5625rem;
@@ -222,8 +205,8 @@ h2 {
 }
 
 h3 {
-  font-size: 32px;
-  font-size: 2.02254rem;
+  font-size: 39px;
+  font-size: 2.42705rem;
   line-height: 50px;
   line-height: 3.125rem;
   margin-top: 25px;
@@ -233,8 +216,8 @@ h3 {
 }
 
 h4 {
-  font-size: 32px;
-  font-size: 2.02254rem;
+  font-size: 39px;
+  font-size: 2.42705rem;
   line-height: 50px;
   line-height: 3.125rem;
   margin-top: 25px;
@@ -334,7 +317,7 @@ ul ul {
 }
 
 dd {
-  margin: 0 0 0 4rem;
+  margin: 0 0 0 2rem;
 }
 
 /**
@@ -343,7 +326,7 @@ dd {
 menu,
 ol,
 ul {
-  padding: 0 0 0 4rem;
+  padding: 0 0 0 2rem;
 }
 
 /**
@@ -379,7 +362,7 @@ svg:not(:root) {
  * Address margin not present in IE 8/9 and Safari 5.
  */
 figure {
-  margin: 1.5625rem 4rem;
+  margin: 1.5625rem 2rem;
 }
 
 /**
