@@ -1,6 +1,6 @@
-/* LISTS */
+/* article settings */
 article {
-  padding: 3rem;
+  padding: rhythm(2);
   img {
     max-width: 100%;
     height: auto;
@@ -8,13 +8,20 @@ article {
 }
 
 .alignright {
-  float: right;
+	//@include trailer(1);
+	float: right;
+	margin-left: rhythm(1);
+	margin-bottom: rhythm(1);
 }
 
 .alignleft {
-  float: left;
+	//@include trailer(1);
+	margin-right: rhythm(1);
+	margin-bottom: rhythm(1);
+	float: left;
 }
 
+/* LISTS */
 ul, ol {
   padding-left: 4rem;
 }
@@ -129,9 +136,11 @@ kbd {
 /* QUOTES */
 
 blockquote {
+	@include trailer(1);
   border-left: 4px solid #dddddd;
   padding: 0 15px;
   color: #777777;
+
 }
 
 blockquote > :first-child {

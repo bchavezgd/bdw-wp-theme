@@ -165,7 +165,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, serif;
+  font-family: "Source Code Pro", monospace, serif;
   font-size: 1em;
 }
 
@@ -191,6 +191,7 @@ h1 {
   margin-top: 1.5625rem;
   margin-bottom: 25px;
   margin-bottom: 1.5625rem;
+  letter-spacing: 1px;
 }
 
 h2 {
@@ -202,6 +203,7 @@ h2 {
   margin-top: 1.5625rem;
   margin-bottom: 25px;
   margin-bottom: 1.5625rem;
+  letter-spacing: 1px;
 }
 
 h3 {
@@ -652,9 +654,9 @@ section.content:last-child {
 }
 
 /* article */
-/* LISTS */
+/* article settings */
 article {
-  padding: 3rem;
+  padding: 3.125rem;
 }
 article img {
   max-width: 100%;
@@ -663,12 +665,17 @@ article img {
 
 .alignright {
   float: right;
+  margin-left: 1.5625rem;
+  margin-bottom: 1.5625rem;
 }
 
 .alignleft {
+  margin-right: 1.5625rem;
+  margin-bottom: 1.5625rem;
   float: left;
 }
 
+/* LISTS */
 ul, ol {
   padding-left: 4rem;
 }
@@ -784,6 +791,8 @@ kbd {
 
 /* QUOTES */
 blockquote {
+  margin-bottom: 25px;
+  margin-bottom: 1.5625rem;
   border-left: 4px solid #dddddd;
   padding: 0 15px;
   color: #777777;

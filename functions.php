@@ -54,10 +54,21 @@
 				array(
 					'labels' => array(
 						'name' => __('portfolio'),
-						'singular_name' => __('portfolio')
+						'singular_name' => __('portfolio'),
+						'add_new_item' => __('Add New Portfolio Item'),
+						'edit_item' => __('Edit Portfolio item'),
+						'new_item' => __('New Portfolio Item'), 
+						'all_items' => __('All Portfolio Items'),
+						'view_items' => __('View Portfolio'),
+						'search_items' => __('Search Portfolio'),
+						'not_found' => __('No Portfolio Found'),
+						'not_found_in_trash' => __('No portfolio items in trash'),
+						'parent_item_colon' => '',
+						'menu_name' => 'Portfolio'
 						),
 					'public' => true,
 					'has_archive' => true, 
+					'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'comments' )
 				)
 			);
 			register_post_type('generic-content', 
@@ -70,18 +81,5 @@
 					'has_archive' => true, 
 				)
 			);
+			
 		}
-/*
-		function create_post_type(){
-			register_post_type('generic-content', 
-				array(
-					'labels' => array(
-						'name' => __('generic content'),
-						'singular_name' => __('generic content')
-						),
-					'public' => true,
-					'has_archive' => true, 
-				)
-			);
-		}
-		*/

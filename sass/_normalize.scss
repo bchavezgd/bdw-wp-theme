@@ -163,7 +163,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, serif;
+  font-family: $mono;
   @if support-legacy-browser(ie, "6") {
     _font-family: 'courier new', monospace;
   }
@@ -195,6 +195,7 @@ h1 {
   /* Set 1 unit of vertical rhythm on the top and bottom margins. */
   @include leader(1, $h1-font-size);
   @include trailer(1, $h1-font-size);
+	letter-spacing: 1px;
 }
 
 @if not $strict-normalize or support-legacy-browser(ie, "7") {
@@ -202,6 +203,8 @@ h1 {
     @include adjust-font-size-to( $h2-font-size );
     @include leader(1, $h2-font-size);
     @include trailer(1, $h2-font-size);
+  	letter-spacing: 1px;
+
   }
 
   h3 {
