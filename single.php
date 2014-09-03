@@ -15,7 +15,7 @@ get_header(); ?>
 				endif;
 		?>
 	
-	<div class="clear"></div>
+<hr>
 	<?php
 		wp_link_pages( 
 			array(

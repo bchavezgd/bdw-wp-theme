@@ -27,20 +27,22 @@
 	
 	<body <?php body_class(); ?> >
 		<div class="wrapper">
-		<header class="site_name">
-			<div>
+		<header>
+			<div class="masthead">
 				<h1>
 					<a href="<?php bloginfo('url'); ?>" id="site_name" >
 						<?php bloginfo('name'); ?>
 					</a>
 				</h1>
 				<p>
-					<?php bloginfo('description'); ?>
+					<?php bloginfo('description'); // tagline ?>
 				</p>
 			</div>
-		</header>
+		
 			<nav>
-				<ul>
+				<!--<ul>-->
 					<?php wp_nav_menu(); ?>
-				</ul>
+				<!--</ul>-->
 			</nav>
+			
+		</header>

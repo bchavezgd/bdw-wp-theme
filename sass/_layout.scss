@@ -1,36 +1,41 @@
 // layout
 .wrapper {
-  width: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	@extend .cf;
 }
 
 .entry {
-  width: 61%;
-  max-width: 66rem;
-  min-width: 33rem;
+	width: 61%;
+	max-width: 66rem;
+	min-width: 33rem;
 }
 
 .clear {
-  clear: both;
+	clear: both;
 }
 
 .cf {
-  zoom: 1;
-  &:after {
-    clear: both;
-  }
-  &:before, &:after {
-    content: "";
-    display: table;
-  }
+	zoom: 1;
+	&:after {
+		clear: both;
+	}
+	&:before, &:after {
+		content: "";
+		display: table;
+	}
 }
 
-section.content {
-  img {
-    margin: 0.25rem;
-  }
-  &:last-child {
-    border-bottom: 3px;
-    padding-bottom: 4rem;
-  }
+
+.content {
+	@extend .cf;
+	img {
+		margin: rhythm(1);
+	}
+	&:last-child {
+		@include trailer(3);
+		
+	}
 }
 

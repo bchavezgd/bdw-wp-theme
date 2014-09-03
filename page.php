@@ -1,10 +1,8 @@
 <?php // page.php
 
-get_header(); 
-echo "<main>";
-if(have_posts()):
-	while(have_posts()): 
-		the_post(); ?>
+get_header(); ?>
+<main class="cf">
+<?php if(have_posts()): while(have_posts()): the_post(); ?>
  <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	 <h3 class="title">
 		 <a href="<?php the_permalink(); ?>" rel="bookmark" >

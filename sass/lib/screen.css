@@ -585,21 +585,28 @@ th {
 /* global settings */
 header {
   display: block;
+  height: 100vh;
+  background: #bfbcbc;
 }
 
 /* type settings */
-.title {
-  font-family: "oswald", impact, san-serif;
+.title, h1, h3, h5 {
   font-weight: 700;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h2, h4, h6 {
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6, .title {
   font-family: "oswald", impact, san-serif;
 }
 
 /* layout */
 .wrapper {
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .entry {
@@ -612,23 +619,23 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
 }
 
-.cf {
+.cf, .wrapper, .content {
   zoom: 1;
 }
-.cf:after {
+.cf:after, .wrapper:after, .content:after {
   clear: both;
 }
-.cf:before, .cf:after {
+.cf:before, .wrapper:before, .content:before, .cf:after, .wrapper:after, .content:after {
   content: "";
   display: table;
 }
 
-section.content img {
-  margin: 0.25rem;
+.content img {
+  margin: 1.5625rem;
 }
-section.content:last-child {
-  border-bottom: 3px;
-  padding-bottom: 4rem;
+.content:last-child {
+  margin-bottom: 75px;
+  margin-bottom: 4.6875rem;
 }
 
 /* article */
@@ -655,7 +662,7 @@ article img {
 
 /* LISTS */
 ul, ol {
-  padding-left: 4rem;
+  padding-left: 6.25rem;
 }
 
 ul li > :first-child,
