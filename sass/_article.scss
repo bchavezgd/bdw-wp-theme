@@ -8,17 +8,15 @@ article {
 }
 
 .alignright {
-	//@include trailer(1);
+	@include trailer(1);
 	float: right;
 	margin-left: rhythm(1);
-	margin-bottom: rhythm(1);
 }
 
 .alignleft {
-	//@include trailer(1);
-	margin-right: rhythm(1);
-	margin-bottom: rhythm(1);
+	@include trailer(1);
 	float: left;
+	margin-right: rhythm(1);	
 }
 
 /* LISTS */
@@ -44,8 +42,8 @@ dl {
 }
 
 dl dt {
-  font-size: 14px;
-  font-weight: bold;
+  @include adjust-font-size-to(0.875rem);
+  font-weight: 700;
   font-style: italic;
   padding: 0;
   margin: 15px 0 5px;
@@ -128,7 +126,7 @@ kbd {
   border-radius: 2px 2px 2px 2px;
   border-style: solid;
   border-width: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $bodyCopy;
   line-height: 10px;
   padding: 1px 4px;
 }

@@ -162,8 +162,6 @@ h1 {
   line-height: 100px;
   line-height: 6.25rem;
   /* Set 1 unit of vertical rhythm on the top and bottom margins. */
-  margin-top: 25px;
-  margin-top: 1.5625rem;
   margin-bottom: 25px;
   margin-bottom: 1.5625rem;
   letter-spacing: 1px;
@@ -586,6 +584,10 @@ header {
   background: #bfbcbc;
 }
 
+.masthead h1 {
+  margin-top: 0;
+}
+
 /* type settings */
 .title, h1, h3, h5 {
   font-weight: 700;
@@ -627,6 +629,13 @@ h1, h2, h3, h4, h5, h6, .title {
   display: table;
 }
 
+.section > p:first-of-type {
+  font-size: 25px;
+  font-size: 1.5625rem;
+  line-height: 50px;
+  line-height: 3.125rem;
+}
+
 .content img {
   margin: 1.5625rem;
 }
@@ -646,15 +655,17 @@ article img {
 }
 
 .alignright {
+  margin-bottom: 25px;
+  margin-bottom: 1.5625rem;
   float: right;
   margin-left: 1.5625rem;
-  margin-bottom: 1.5625rem;
 }
 
 .alignleft {
-  margin-right: 1.5625rem;
+  margin-bottom: 25px;
   margin-bottom: 1.5625rem;
   float: left;
+  margin-right: 1.5625rem;
 }
 
 /* LISTS */
@@ -681,7 +692,10 @@ dl {
 
 dl dt {
   font-size: 14px;
-  font-weight: bold;
+  font-size: 0.875rem;
+  line-height: 25px;
+  line-height: 1.5625rem;
+  font-weight: 700;
   font-style: italic;
   padding: 0;
   margin: 15px 0 5px;
@@ -766,7 +780,7 @@ kbd {
   border-radius: 2px 2px 2px 2px;
   border-style: solid;
   border-width: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "lato", helvetica, arial, san-serif;
   line-height: 10px;
   padding: 1px 4px;
 }

@@ -8,10 +8,7 @@ to call this template part use.
 	get_template part('loop','main');
 
 -->
-<?php   
-	if( have_posts() ) : // begin the_loop
-		while( have_posts() ) : the_post(); 
-?><!--  -->
+<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?><!-- begin loop  -->
 		<hr /> <!-- remove this later -->
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a>

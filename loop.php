@@ -1,9 +1,14 @@
-<?php // begin the_loop  
-	if( have_posts() ) : while( have_posts() ) : the_post(); 
-?>
+<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
+
 		<hr><article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 			<section class="the_content">
-				<?php // adding custom post classes 
+			
+				<?php 
+					// adds thumbnails for posts.
+						if(has_post_thumbnail()) {
+							the_post_thumbnail('thumbnail');
+						}
+					// adding custom post classes 
 						if(has_post_format('aside'))
 						{
 							echo the_content();
@@ -59,7 +64,8 @@
 							echo '</h3>';
 							echo the_content();
 						}
-						else { // if no other post types are present, displays standard post type
+						else { 
+					// if no other post types are present, displays standard post type
 							echo '<h3 class="title"><a href="';
                             echo the_permalink();
                             echo ' "> ';
@@ -67,11 +73,7 @@
 							echo '</a></h3>';
 							echo the_excerpt();
 						}
-						// adds thumbnails for posts.
-						if(has_post_thumbnail())
-						{
-							the_post_thumbnail('thumbnail');
-						}
+						
 
 					
 				?>
