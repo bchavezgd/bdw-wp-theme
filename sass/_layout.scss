@@ -3,7 +3,6 @@
 	width: 100%;
 	margin: 0;
 	padding: 0;
-	@extend .cf;
 }
 
 .entry {
@@ -22,22 +21,34 @@
 		clear: both;
 	}
 	&:before, &:after {
-		content: "";
+		content: " ";
 		display: table;
 	}
 }
-.section>p:first-of-type {
-		@include adjust-font-size-to(1.5625rem);
+
+.alignright {
+	@include trailer(1);
+	float: right;
+	margin-left: rhythm(1);
 }
 
-.content {
-	@extend .cf;
-	img {
-		margin: rhythm(1);
-	}
-	&:last-child {
-		@include trailer(3);
-		
-	}
+.alignleft {
+	@include trailer(1);
+	float: left;
+	margin-right: rhythm(1);	
 }
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+
+.wp-caption-text {
+	font-size: 16px/25px !important;
+	font-weight: 300;
+	font-style: italic;
+}
+
 

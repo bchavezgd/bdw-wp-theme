@@ -7,17 +7,21 @@ article {
   }
 }
 
-.alignright {
-	@include trailer(1);
-	float: right;
-	margin-left: rhythm(1);
+main {
+	padding: rhythm(2);
 }
 
-.alignleft {
-	@include trailer(1);
-	float: left;
-	margin-right: rhythm(1);	
+.content {
+	img {
+		margin: 0;
+	}
+	&:last-child {
+		@include trailer(3);
+		@include trailing-border();
+	}
 }
+
+
 
 /* LISTS */
 ul, ol {
@@ -30,7 +34,7 @@ ul li ul:first-of-type,
 ol li ol:first-of-type,
 ul li ol:first-of-type,
 ol li ul:first-of-type {
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 ul ul, ul ol, ol ol, ol ul {
@@ -54,11 +58,11 @@ dl dt:first-child {
 }
 
 dl dt > :first-child {
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 dl dt > :last-child {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 dl dd {
@@ -133,21 +137,25 @@ kbd {
 
 /* QUOTES */
 
-blockquote {
+  /**
+   * Set 1 unit of vertical rhythm on the top and bottom margin.
+   */
+
+  blockquote {
 	@include trailer(1);
-  border-left: 4px solid #dddddd;
-  padding: 0 15px;
-  color: #777777;
-
+	margin-left: $indent-amount;
+	border-left: 4px solid #dddddd;
+	padding: 0 15px;
+	color: #777777;
+	&:first-child {
+		margin-top: 0px;
+	}
+	&:last-child {
+		margin-bottom: 0px;
+	}
 }
 
-blockquote > :first-child {
-  margin-top: 0px;
-}
 
-blockquote > :last-child {
-  margin-bottom: 0px;
-}
 
 /* HORIZONTAL RULES */
 

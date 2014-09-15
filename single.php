@@ -1,20 +1,27 @@
-<?php // single.php
-get_header(); ?>
-<hr>
+<!--
+
+single post template 
+
+single.php
+
+-->
+<?php get_header(); ?>
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 <article class="entry" >
 	<section class="content cf">
 		<h3 class="title"><?php the_title(); ?></h3>
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<?php the_content();?>
-	</section><!-- .entry-content -->
+	</section><!-- /content -->
+	<div class="entry-info">
 		<p class="blogcategory">Categories: <?php the_category(' &bull; '); ?></p>
 		<p class="blogtags"><?php the_tags(); ?> </p> 
 		<?php 
 			edit_post_link(__('<strong>Edit</strong>'));
-				endwhile;
-				endif;
+			endwhile;
+			endif;
 		?>
-	
+	</div>
+	</article><!-- /entry -->
 <hr>
 	<?php
 		wp_link_pages( 
@@ -25,7 +32,7 @@ get_header(); ?>
 				'link_after'  => '</span>',
 		));
 	?>
-</article>
+
 <hr>
 <?php
     get_sidebar();

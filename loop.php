@@ -1,7 +1,7 @@
 <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
-		<hr><article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-			<section class="the_content">
+		<hr><section <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+			<article class="the_content">
 			
 				<?php 
 					// adds thumbnails for posts.
@@ -77,15 +77,16 @@
 
 					
 				?>
-			</section>
+			</article>
 			<p class="byline">Posted by: <?php the_author(); ?></p>
 			<p class="dated">Posted on: <?php echo get_the_date(); ?>, at <?php echo get_the_time(); ?> in <?php the_category(', '); ?></p>
 			
-		</article>
+		</section>
 										
 		<?php //ends the_loop
 			endwhile; ?>
-		<?php	next_posts_link('&laquo; Previous Entries');
+		<?php	
+			next_posts_link('&laquo; Previous Entries');
 			previous_posts_link('Next Entries &laquo;');
 			else : ?>
 				<p>Not Found</p>

@@ -26,7 +26,7 @@
 </head>
 	
 	<body <?php body_class(); ?> >
-		<div class="wrapper">
+		<div class="wrapper cf">
 		<header>
 			<div class="masthead">
 				<h1>

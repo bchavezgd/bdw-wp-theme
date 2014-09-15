@@ -3,7 +3,7 @@
 // type
 $bodyCopy: 'lato', helvetica, arial, san-serif;
 $headline: 'oswald', impact, san-serif;
-$mono: 'Source Code Pro', monospace, serif;
+$mono: 'Source Code Pro', 'Courier New', monospace, serif;
 $phi: 1.61803398875;
 
 // for normalize vertical rhythm
@@ -19,7 +19,7 @@ $h2-font-size: 2 * $phi * $base-font-size;
 $h3-font-size: 1.5 * $phi * $base-font-size;
 $h4-font-size: 1.5 * $phi * $base-font-size;
 $h5-font-size: $base-font-size;
-$h6-font-size: $base-font-size;
+$h6-font-size: (1 / $phi) * $base-font-size;
 $indent-amount: 2rem;
 
 // Set this to true to force CSS output to exactly match normalize.css.
@@ -64,12 +64,12 @@ $base-font-family: $bodyCopy;
   }
 }
 
-/* reset */
-
+// Mix-in lib
 @import "compass/support";
 @import "compass/css3/box-sizing";
 @import "compass/typography/vertical_rhythm";
 
+/* reset / normalize */
 @import 'normalize';
 
 /* global settings */
@@ -78,9 +78,9 @@ $base-font-family: $bodyCopy;
 /* type settings */
 @import 'type';
 
-/* layout */
+/* primary layout */
 @import 'layout';
 
-/* article */
-@import 'article';
+/* content settings */
+@import 'content';
 
