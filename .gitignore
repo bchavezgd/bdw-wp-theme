@@ -2,6 +2,7 @@
 .sass-cache/
 node_modules/
 *.zip 
+*.css # thou shalt never commit dev css to git
 
 # Windows image file caches
 Thumbs.db
