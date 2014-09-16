@@ -47,7 +47,7 @@
 // custom images sizes
 	add_image_size('custom', 300, 200, true);
 // creating custom post types. 
-//defaults to single.php, need to add single-generic-content.php to for custom template. 
+//defaults to single.php, need to add single-portfolio.php to for custom template. 
 	add_action('init','create_post_type');
 		function create_post_type(){
 			register_post_type('portfolio', 
@@ -68,7 +68,7 @@
 						),
 					'public' => true,
 					'has_archive' => true, 
-					'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'comments' )
+					'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'comments', 'categories' )
 				)
 			);
 			register_post_type('generic-content', 
@@ -83,3 +83,10 @@
 			);
 			
 		}
+//jQuery Insert From Google
+if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
+function my_jquery_enqueue() {
+   wp_deregister_script('jquery');
+   wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", false, null);
+   wp_enqueue_script('jquery');
+}

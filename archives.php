@@ -1,8 +1,8 @@
-<?php
-/*
+<?php get_header(); ?>
+<!--
 Template Name: Archives
-*/
-get_header(); ?>
+-->
+
 
 <main class="content">
 	<?php the_post(); ?>

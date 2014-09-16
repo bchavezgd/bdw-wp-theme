@@ -18,7 +18,8 @@ Currently working though books, to make basic unstyled theme using compass/sass,
 	- `get_template_part('loop');`
 - added theme support for:
 	- widgets
-	- *Generic Content* custom post types
+	- *portfolio* custom post types 
+		- this should be a plug-in.
 	- common post types
 		- aside, quote, status, etc.
 - created `page.php`
@@ -29,6 +30,24 @@ Currently working though books, to make basic unstyled theme using compass/sass,
 	- watch
 		- currently runs compass then concat for style.css
 
+ 
+
+--------
+
+## Planned: 
+
+- learn muliple loops. 
+	- add featured loop 
+		- calls from post in the "featured" category
+	- add category loops 
+		- similar to featured loop but styled differently. 
+- add stylesheets for media queries. 
+	- tablet (portrait) 
+	- phone
+
+
+---
+## Bugs: 
 **Media Library** *fixed*  
 
 - not loading any images when trying to add media to a post/page. 
@@ -41,17 +60,4 @@ Currently working though books, to make basic unstyled theme using compass/sass,
 			- removed comments. no change
 			- removed white space. no change 
 			- rearranged `generic content` section. 
-				- corrected issue. 
-
---------
-
-## Planned: 
-- add stylesheets for media queries. 
-	- tablet (portrait) 
-	- phone
-- learn muliple loops. 
-	- add featured loop and catagory loops. 
-- single.php doesn't show content. 
-
----
-## Bugs: 
+				- corrected issue.

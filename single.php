@@ -9,8 +9,10 @@ single.php
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 <article class="entry" >
 	<section class="content cf">
+		<!-- change to get_template_part('content',get_post_format()); -->
 		<h3 class="title"><?php the_title(); ?></h3>
-		<?php the_content();?>
+		<?php the_content();?> 
+
 	</section><!-- /content -->
 	<div class="entry-info">
 		<p class="blogcategory">Categories: <?php the_category(' &bull; '); ?></p>

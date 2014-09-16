@@ -74,6 +74,7 @@
 							echo the_excerpt();
 						}
 						
+// links from this loop will lead all to single.php template
 
 					
 				?>
