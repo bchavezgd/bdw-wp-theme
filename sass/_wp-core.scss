@@ -1,0 +1,91 @@
+/**
+* WordPress Core
+*
+*/
+.alignnone {
+	@include trailer(1);
+	margin: {
+		top: 0;
+		right: rhythm(1);
+		left: 0;
+	}
+}
+
+.alignright {
+	@include trailer(1);
+	float: right;
+	margin-left: rhythm(1);
+}
+
+.alignleft {
+	@include trailer(1);
+	float: left;
+	margin-right: rhythm(1);
+}
+
+.aligncenter,
+div.aligncenter {
+	@include trailer(1);
+	display: block;
+	margin: 0 auto;
+	clear: both;
+}
+a {
+	img {
+		&.alignright {
+			@extend .alignright;
+		}
+
+		&.alignnone {
+			@extend .alignnone;
+		}
+
+		&.alignleft {
+			@extend .alignleft;
+		}
+
+		&.aligncenter {
+			@extend .aligncenter;
+		}
+	}
+}
+
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+	img {
+		border: 0 none;
+		height: auto;
+		margin: 0;
+		max-width: 98.5%;
+		padding: 0;
+		width: auto;
+	}
+	p.wp-caption-text {
+		@include adjust-font-size-to(13px);
+		margin: 0;
+		padding: 0 4px 5px;
+		font-weight: 300;
+		font-style: italic;
+	}
+	&.alignnone {
+		@extend .alignnone;
+	}
+
+	&.alignleft {
+		@extend .alignleft;
+	}
+
+	&.alignright {
+		@extend .alignright;
+	}
+}
+
+
+
+
+

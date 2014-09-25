@@ -10,7 +10,7 @@ single.php
 <article class="entry" >
 	<section class="content cf">
 		<!-- change to get_template_part('content',get_post_format()); -->
-		<h3 class="title"><?php the_title(); ?></h3>
+		<h2 class="title"><?php the_title(); ?></h2>
 		<?php the_content();?> 
 
 	</section><!-- /content -->
@@ -18,7 +18,7 @@ single.php
 		<p class="blogcategory">Categories: <?php the_category(' &bull; '); ?></p>
 		<p class="blogtags"><?php the_tags(); ?> </p> 
 		<?php 
-			edit_post_link(__('<strong>Edit</strong>'));
+			edit_post_link(__('<strong>edit this post.</strong>'));
 			endwhile;
 			endif;
 		?>

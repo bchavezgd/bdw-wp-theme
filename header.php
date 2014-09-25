@@ -37,7 +37,7 @@
 				<p>
 					<?php bloginfo('description'); // tagline ?>
 				</p>
-			</div>
+			</div><!-- end masthead -->
 		
 			<nav>
 				<!--<ul>-->

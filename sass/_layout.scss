@@ -1,4 +1,4 @@
-// layout
+// layout elements
 .wrapper {
 	width: 100%;
 	margin: 0;
@@ -20,35 +20,13 @@
 	&:after {
 		clear: both;
 	}
-	&:before, &:after {
+	&:before, 
+	&:after {
 		content: " ";
 		display: table;
 	}
 }
 
-.alignright {
-	@include trailer(1);
-	float: right;
-	margin-left: rhythm(1);
-}
 
-.alignleft {
-	@include trailer(1);
-	float: left;
-	margin-right: rhythm(1);	
-}
-
-.aligncenter {
-	clear: both;
-	display: block;
-	margin: 0 auto;
-}
-
-
-.wp-caption-text {
-	font-size: 16px/25px !important;
-	font-weight: 300;
-	font-style: italic;
-}
 
 

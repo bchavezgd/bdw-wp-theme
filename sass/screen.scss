@@ -27,17 +27,28 @@ $strict-normalize: false;
 
 // The default font family.
 $base-font-family: $bodyCopy;
-  // Optional map of minimum browser versions to support. For example, to
-  // remove support for IE 7 and earlier, set $browser-minimum-versions['ie']
-  // to '8'.
+  
 
-   $browser-minimum-versions: (
-    'chrome':  null,
-    'firefox': null,
-    'ie':      '9',
-    'safari':  null,
-    'opera':   null
-  );
+// color scheme
+$backgroundClr: #fff;
+$primaryClr: #eee;
+$secondaryClr: #777;
+$contrastClr: #333;
+$highlightClr: #ffa;
+
+
+
+// Optional map of minimum browser versions to support. For example, to
+// remove support for IE 7 and earlier, set $browser-minimum-versions['ie']
+// to '8'.
+
+$browser-minimum-versions: (
+	'chrome':  null,
+	'firefox': null,
+	'ie':      '9',
+	'safari':  null,
+	'opera':   null
+);
 
 
 // To work around a bug in compass-core 1.0.0-alpha.17, we override Compass'
@@ -79,6 +90,7 @@ $base-font-family: $bodyCopy;
 @import 'type';
 
 /* primary layout */
+@import 'wp-core';
 @import 'layout';
 
 /* content settings */

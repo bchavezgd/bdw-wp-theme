@@ -1,29 +1,28 @@
-<!-- loop-featured.php -->
+<!-- loop-second.php -->
 <!-- 
 
 This is a template_part. to call into other files use command
 	get_template_part('slug','name'); 
 
 to call this template part use. 
-	get_template part('loop','featured');
+	get_template part('loop','second');
 
-featured post loop, second loop, if blog posts are on the landing page. 
+second post loop, second loop, if blog posts are on the landing page. 
 
 -->
-<?php 
-$do_not_duplicate=null;
 
-$args=array( // featured post loop arguments. 
-		'showposts'=>3, 
-		'category_name'=>'featured'
+<?php 
+
+	$args=array( // second post loop arguments. 
+		'showposts'=>3 
+		// 'category_name'=>'stuff'
 	);
 
-$featured_loop=new WP_query($args);
+	$second_loop=new WP_query($args);
 
-	while($featured_loop->have_posts()): $featured_loop->the_post(); 
-
-$do_not_duplicate=$post->ID;
-?>
+	while($second_loop->have_posts()): $second_loop->the_post(); ?>
+<!-- begin loop everything from here to end will repeat -->
+		
 <!-- loop content and styling --> 
 
 		<section <?php post_class() ?> id="post-<?php the_ID(); ?>">
@@ -35,7 +34,6 @@ $do_not_duplicate=$post->ID;
 				<?php the_excerpt(); ?>
 			</div>			
 		</section>
-
 <!-- end loop content and styling --> 						
 
 <?php endwhile; ?> <!--ends loop -->

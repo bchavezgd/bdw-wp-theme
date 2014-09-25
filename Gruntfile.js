@@ -9,6 +9,9 @@ module.exports = function (grunt) {
 				files: ['sass/*.scss','sass/*.sass'],
 				tasks: ['compass:dev', 'autoprefixer:css', 'concat:css']
 			},
+			php: {
+				files: ['*.php']
+			},
 			options: {
 				livereload: true
 			}
