@@ -30,11 +30,11 @@ $base-font-family: $bodyCopy;
   
 
 // color scheme
-$backgroundClr: #fff;
-$primaryClr: #eee;
-$secondaryClr: #777;
-$contrastClr: #333;
-$highlightClr: #ffa;
+$cr-background: #fff;
+$cr-primary: #eee;
+$cr-secondary: #777;
+$cr-contrast: #333;
+$cr-highlight: #ffa;
 
 
 
@@ -42,7 +42,8 @@ $highlightClr: #ffa;
 // remove support for IE 7 and earlier, set $browser-minimum-versions['ie']
 // to '8'.
 
-$browser-minimum-versions: (
+$browser-minimum-versions: ( // this suddenly doesn't work... why?
+	// well it works but not in windows 7? 
 	'chrome':  null,
 	'firefox': null,
 	'ie':      '9',
