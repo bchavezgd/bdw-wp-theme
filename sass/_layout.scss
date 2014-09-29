@@ -27,6 +27,21 @@
 	}
 }
 
-
+// featured loop styling
+.featured-posts {
+	width: 100%;
+	height: 100vh;
+	background-color: $cr-secondary;
+	color: $cr-highlight;
+	padding: rhythm(1);
+	&:after {
+		content: "end featured posts";
+	}
+}
+.second-loop {
+	width: column-span(1);
+	background-color: darken($cr-primary, 20% );
+	color: $cr-contrast;
+}
 
 

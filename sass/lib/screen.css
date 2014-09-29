@@ -767,6 +767,26 @@ div.aligncenter {
   display: table;
 }
 
+/* line 31, ../_layout.scss */
+.featured-posts {
+  width: 100%;
+  height: 100vh;
+  background-color: #777;
+  color: #ffa;
+  padding: 1.5625rem;
+}
+/* line 37, ../_layout.scss */
+.featured-posts:after {
+  content: "end featured posts";
+}
+
+/* line 41, ../_layout.scss */
+.second-loop {
+  width: column-span(1);
+  background-color: #bbbbbb;
+  color: #333;
+}
+
 /* content settings */
 /* article settings */
 /* line 2, ../_content.scss */
