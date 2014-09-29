@@ -1,15 +1,3 @@
-<!-- loop-featured.php -->
-<!-- 
-
-This is a template_part. to call into other files use command
-	get_template_part('slug','name'); 
-
-to call this template part use. 
-	get_template part('loop','featured');
-
-featured post loop, second loop, if blog posts are on the landing page. 
-
--->
 <section class="featured-posts">
 <?php 
 $do_not_duplicate=null;
