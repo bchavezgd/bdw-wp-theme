@@ -2,7 +2,13 @@
 .sass-cache/
 node_modules/
 *.zip 
-*.css # thou shalt never commit dev css to git
+
+# thou shalt never commit dev css to git
+*.css 
+
+# sass map from brackets sass extention
+*.map 
+*.css.map
 
 # Windows image file caches
 Thumbs.db
