@@ -65,7 +65,8 @@ a {
 		padding: 0;
 		width: auto;
 	}
-	p.wp-caption-text {
+	p.wp-caption-text,
+	.wp-caption-text {
 		@include adjust-font-size-to(13px);
 		margin: 0;
 		padding: 0 4px 5px;
@@ -85,6 +86,9 @@ a {
 	}
 }
 
+.sticky{}
+.bypostauthor{}
+.gallery-caption{}
 
 
 

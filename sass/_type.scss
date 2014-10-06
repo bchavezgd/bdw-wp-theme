@@ -8,3 +8,26 @@ h2, h4, h6 {
 h1, h2, h3, h4, h5, h6, .title {
   font-family: $headline;
 }
+
+a {
+	color: $cr-primary;
+	text-decoration: none;
+	&:link {
+		color: $cr-primary;
+	}
+	&:visited {
+		color: darken($cr-primary, 5%);
+	}
+	&:hover {
+		color: lighten($cr-primary, 10%);
+		border-bottom: 1px $cr-highlight solid;
+	}
+	&:active {
+		color: lighten($cr-primary, 20%);
+		border-bottom: 1px $cr-highlight solid;
+	}
+	&:active,
+	&:hover {
+		outline: 0;
+	}
+}

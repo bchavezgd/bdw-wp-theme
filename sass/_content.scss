@@ -1,28 +1,4 @@
-/* article settings */
-article {
-  padding: rhythm(2);
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-}
 
-main {
-	padding: rhythm(2);
-}
-
-.content {
-	img {
-		margin: 0;
-	}
-	&>p:first-of-type {
-		@include adjust-font-size-to($base-font-size * $phi);
-	}
-	&:last-child {
-		@include trailer(3);
-		@include trailing-border();
-	}
-}
 
 
 
@@ -154,9 +130,8 @@ kbd {
   blockquote {
 	@include trailer(1);
 	margin-left: $indent-amount;
-	border-left: 4px solid #dddddd;
+	border-left: 4px solid $cr-secondary;
 	padding: 0 15px;
-	color: #777777;
 	&:first-child {
 		margin-top: 0px;
 	}

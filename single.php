@@ -1,3 +1,4 @@
+<?php get_header(); ?>
 <!--
 
 single post template 
@@ -5,7 +6,6 @@ single post template
 single.php
 
 -->
-<?php get_header(); ?>
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 <article class="entry" >
 	<section class="content cf">

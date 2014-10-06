@@ -1,15 +1,4 @@
-<?php 
-$args = array( // arguments for removing featued posts from main loop. 
-	'cat' => -8,
-	'posts_per_page' => 5
-);
-
-
-query_posts($args); // applies arguments to modify the main loop. 
-
-
-if( have_posts() ) : while( have_posts() ) : the_post(); ?>
-<!-- begin loop --> 
+<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
 <section <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 	<article class="the_content">
@@ -77,7 +66,7 @@ if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 				}
 				else { 
 // if no other post types are present, 
-//displays standard post type
+// displays standard post type
 					echo '<h3 class="title"><a href="';
 					echo the_permalink();
 					echo ' "> ';
@@ -87,7 +76,8 @@ if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 				}
 						
 // links from this loop will lead all to single.php template
-// us get_template_part('content', get_post_format()); to make custom post format templates. 
+// us get_template_part('content', get_post_format()); 
+// to make custom post format templates. 
 	
 			?>
 			</article>

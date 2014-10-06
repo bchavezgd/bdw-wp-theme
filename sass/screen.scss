@@ -30,11 +30,11 @@ $base-font-family: $bodyCopy;
   
 
 // color scheme
-$cr-background: #fff;
-$cr-primary: #eee;
-$cr-secondary: #777;
-$cr-contrast: #333;
-$cr-highlight: #ffa;
+$cr-background: #0A0C0D;
+$cr-primary: #54778C;
+$cr-secondary: #141E26;
+$cr-contrast: #8B8C74;
+$cr-highlight: #F2EC99;
 
 
 
@@ -75,6 +75,7 @@ $browser-minimum-versions: ( // this suddenly doesn't work... why?
     @return $usage > $threshold;
   }
 }
+* {box-sizing: border-box;}
 
 // Mix-in lib
 @import "compass/support";
@@ -84,9 +85,6 @@ $browser-minimum-versions: ( // this suddenly doesn't work... why?
 
 /* reset / normalize */
 @import 'normalize';
-
-/* global settings */
-@import 'global';
 
 /* type settings */
 @import 'type';

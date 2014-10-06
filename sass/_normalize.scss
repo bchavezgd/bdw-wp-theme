@@ -31,6 +31,8 @@ html { // reduces instance
 
 body {
   margin: 0;
+	background-color: $cr-background;
+	color: $cr-primary;
 }
 
 /* HTML5 display definitions
@@ -118,10 +120,7 @@ template {
  * Improve readability when focused and also mouse hovered in all browsers.
  */
 
-a:active,
-a:hover {
-  outline: 0;
-}
+
 
 /* Text-level semantics
    ========================================================================== */
@@ -147,13 +146,7 @@ strong {
    * Set 1 unit of vertical rhythm on the top and bottom margin.
    */
 
-  blockquote {
-	@include trailer(1);
-	margin-left: $indent-amount;
-	border-left: 4px solid #dddddd;
-	padding: 0 15px;
-	color: #777777;
-}
+
 
 /**
  * Address odd `em`-unit font size rendering in all browsers.
@@ -238,8 +231,8 @@ h1 {
    */
 
   mark {
-    background: #ff0;
-    color: #000;
+    background: $cr-highlight;
+    color: $cr-primary;
   }
 }
 
