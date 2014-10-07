@@ -5,6 +5,7 @@ node_modules/
 
 # thou shalt never commit dev css to git
 *.css 
+sass/lib/*.css
 
 # sass map from brackets sass extention
 *.map 
