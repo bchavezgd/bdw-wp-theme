@@ -10,6 +10,16 @@ Currently working though books, to make basic un-styled theme using compass/sass
 ------
 ##Change Log:
 
+2014/10/07: "Do-si-do" 
+
+- separating content from loop with `get_template_part('content',get_post_format()):`
+	- created files:
+		- content-single.php
+		- content-home.php
+			- to call into the home featured loops. 
+			- change name to content-featured.php
+		- content.php
+
 2014/10/06:  "all the changes"
 
 - finished working featured loop also added second and third loop. 

@@ -1,4 +1,6 @@
-
+.page-links {
+	.page-links-title {}
+}
 
 
 
@@ -151,7 +153,7 @@ hr {
   overflow: hidden;
   border: none;
   background: transparent;
-  border-bottom: 4px solid #dddddd;
+  border-bottom: 4px solid $cr-contrast;
   padding: 0;
 }
 

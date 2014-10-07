@@ -20,7 +20,9 @@
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('stylesheet_url'); ?>" />
 	
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-	
+	 <!--[if lt IE 9]>
+		<script src=”http://html5shim.googlecode.com/svn/trunk/html5.js”></script>
+	<![endif]-->
 	<?php 
 		if( is_singular()) 
 			wp_enqueue_script('comment-reply'); 

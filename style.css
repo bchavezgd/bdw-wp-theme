@@ -881,12 +881,12 @@ article img {
 
 /* content settings */
 /* LISTS */
-/* line 6, ../_content.scss */
+/* line 8, ../_content.scss */
 ul, ol {
   padding-left: 3.125rem;
 }
 
-/* line 10, ../_content.scss */
+/* line 12, ../_content.scss */
 ul li > :first-child,
 ol li > :first-child,
 ul li ul:first-of-type,
@@ -896,7 +896,7 @@ ol li ul:first-of-type {
   margin-top: 0;
 }
 
-/* line 19, ../_content.scss */
+/* line 21, ../_content.scss */
 ul ul,
 ul ol,
 ol ol,
@@ -904,12 +904,12 @@ ol ul {
   margin-bottom: 0;
 }
 
-/* line 26, ../_content.scss */
+/* line 28, ../_content.scss */
 dl {
   padding: 0;
 }
 
-/* line 30, ../_content.scss */
+/* line 32, ../_content.scss */
 dl dt {
   font-size: 14px;
   font-size: 0.875rem;
@@ -921,39 +921,39 @@ dl dt {
   margin: 15px 0 5px;
 }
 
-/* line 38, ../_content.scss */
+/* line 40, ../_content.scss */
 dl dt:first-child {
   padding: 0;
 }
 
-/* line 42, ../_content.scss */
+/* line 44, ../_content.scss */
 dl dt > :first-child {
   margin-top: 0;
 }
 
-/* line 46, ../_content.scss */
+/* line 48, ../_content.scss */
 dl dt > :last-child {
   margin-bottom: 0;
 }
 
-/* line 50, ../_content.scss */
+/* line 52, ../_content.scss */
 dl dd {
   margin: 0 0 15px;
   padding: 0 15px;
 }
 
-/* line 55, ../_content.scss */
+/* line 57, ../_content.scss */
 dl dd > :first-child {
   margin-top: 0px;
 }
 
-/* line 59, ../_content.scss */
+/* line 61, ../_content.scss */
 dl dd > :last-child {
   margin-bottom: 0px;
 }
 
 /* CODE */
-/* line 65, ../_content.scss */
+/* line 67, ../_content.scss */
 pre,
 code,
 tt {
@@ -961,7 +961,7 @@ tt {
   font-family: "Source Code Pro", "Courier New", monospace, serif;
 }
 
-/* line 72, ../_content.scss */
+/* line 74, ../_content.scss */
 code,
 tt {
   margin: 0 0px;
@@ -972,7 +972,7 @@ tt {
   border-radius: 3px;
 }
 
-/* line 82, ../_content.scss */
+/* line 84, ../_content.scss */
 pre > code {
   margin: 0;
   padding: 0;
@@ -981,7 +981,7 @@ pre > code {
   background: transparent;
 }
 
-/* line 90, ../_content.scss */
+/* line 92, ../_content.scss */
 pre {
   background-color: #f8f8f8;
   border: 1px solid #cccccc;
@@ -992,14 +992,14 @@ pre {
   border-radius: 3px;
 }
 
-/* line 100, ../_content.scss */
+/* line 102, ../_content.scss */
 pre code,
 pre tt {
   background-color: transparent;
   border: none;
 }
 
-/* line 106, ../_content.scss */
+/* line 108, ../_content.scss */
 kbd {
   border-bottom-colors: none;
   border-left-colors: none;
@@ -1025,7 +1025,7 @@ kbd {
 /**
  * Set 1 unit of vertical rhythm on the top and bottom margin.
  */
-/* line 130, ../_content.scss */
+/* line 132, ../_content.scss */
 blockquote {
   margin-bottom: 25px;
   margin-bottom: 1.5625rem;
@@ -1033,17 +1033,17 @@ blockquote {
   border-left: 4px solid #141E26;
   padding: 0 15px;
 }
-/* line 135, ../_content.scss */
+/* line 137, ../_content.scss */
 blockquote:first-child {
   margin-top: 0px;
 }
-/* line 138, ../_content.scss */
+/* line 140, ../_content.scss */
 blockquote:last-child {
   margin-bottom: 0px;
 }
 
 /* HORIZONTAL RULES */
-/* line 147, ../_content.scss */
+/* line 149, ../_content.scss */
 hr {
   clear: both;
   margin: 15px 0;
@@ -1051,30 +1051,30 @@ hr {
   overflow: hidden;
   border: none;
   background: transparent;
-  border-bottom: 4px solid #dddddd;
+  border-bottom: 4px solid #8B8C74;
   padding: 0;
 }
 
 /* TABLES */
-/* line 160, ../_content.scss */
+/* line 162, ../_content.scss */
 table th {
   font-weight: bold;
 }
 
-/* line 164, ../_content.scss */
+/* line 166, ../_content.scss */
 table th,
 table td {
   border: 1px solid #cccccc;
   padding: 6px 13px;
 }
 
-/* line 170, ../_content.scss */
+/* line 172, ../_content.scss */
 table tr {
   border-top: 1px solid #cccccc;
   background-color: white;
 }
 
-/* line 175, ../_content.scss */
+/* line 177, ../_content.scss */
 table tr:nth-child(2n) {
   background-color: #f8f8f8;
 }

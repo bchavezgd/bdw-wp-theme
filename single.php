@@ -1,42 +1,37 @@
-<?php get_header(); ?>
-<!--
+<?php 
 
-single post template 
+get_header(); 
 
-single.php
+/*
+*	single post template 
+*
+*	single.php
+*
+*/
 
--->
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-<article class="entry" >
-	<section class="content cf">
-		<!-- change to get_template_part('content',get_post_format()); -->
-		<h2 class="title"><?php the_title(); ?></h2>
-		<?php the_content();?> 
+// query
+if (have_posts()) : 
 
-	</section><!-- /content -->
-	<div class="entry-info">
-		<p class="blogcategory">Categories: <?php the_category(' &bull; '); ?></p>
-		<p class="blogtags"><?php the_tags(); ?> </p> 
-		<?php 
-			edit_post_link(__('<strong>edit this post.</strong>'));
-			endwhile;
-			endif;
-		?>
-	</div>
-	</article><!-- /entry -->
-<hr>
-	<?php
-		wp_link_pages( 
-			array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bdw' ) . '</span>',
-				'after'       => '</div>',
-				'link_before' => '<span>',
-				'link_after'  => '</span>',
-		));
-	?>
+// loop
+while (have_posts()) : the_post();
 
-<hr>
-<?php
-    get_sidebar();
-    get_footer();
-?>
+// sepreate file.
+get_template_part('content','single');
+
+// end loop
+endwhile; 
+
+// end query
+endif;
+
+// links pulled from custom menus
+	wp_link_pages( 
+		array(
+			'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bdw' ) . '</span>',
+			'after'       => '</div>',
+			'link_before' => '<span>',
+			'link_after'  => '</span>',
+	));
+
+get_sidebar();
+get_footer();
