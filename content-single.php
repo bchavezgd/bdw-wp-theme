@@ -7,12 +7,12 @@
 	
 	<div class="entry-info">
 		<p class="blogcategory">Categories:
-			<?php the_category( ' &bull; '); ?>
+			<?php the_category( '&bull;'); ?>
 		</p>
 		<p class="blogtags">
 			<?php the_tags(); ?>
 		</p>
-		<?php edit_post_link(__( '<strong>edit this post.</strong>')); ?>
+		<?php edit_post_link(__( '<strong>edit post.</strong>')); ?>
 	</div>
 	
 </article>

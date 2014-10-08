@@ -52,8 +52,8 @@ a {
 
 
 .wp-caption {
-    background: #fff;
-    border: 1px solid #f0f0f0;
+    background: $cr-secondary;
+    border: 1px solid $cr-contrast;
     max-width: 96%; /* Image does not overflow the content area */
     padding: 5px 3px 10px;
     text-align: center;
@@ -71,7 +71,7 @@ a {
 		margin: 0;
 		padding: 0 4px 5px;
 		font-weight: 300;
-		font-style: italic;
+		// font-style: italic;
 	}
 	&.alignnone {
 		@extend .alignnone;

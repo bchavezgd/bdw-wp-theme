@@ -32,7 +32,10 @@
 	
 	<body <?php body_class(); ?> >
 		<div class="wrapper cf">
-		<header>
+			<?php
+$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
+			?>
+			<header style="background-image: url('<?php echo $src[0]; ?>');">
 			<div class="masthead">
 				<h1>
 					<a href="<?php bloginfo('url'); ?>" id="site_name" >

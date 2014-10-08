@@ -2,7 +2,13 @@
 header {
 	display: block;
 	height: 50vh;
-	background: $cr-primary;
+	background: $cr-background;
+	background-size: cover;
+	background-position: center center;
+	&:before {
+		filter: blur(10px);
+		content: " ";
+	}
 }
 .masthead {
 	margin-bottom: 0;
