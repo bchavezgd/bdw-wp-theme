@@ -8,7 +8,13 @@ Learning to create WordPress themes, and customization for the greater good.
 Currently working though books, to make basic un-styled theme using compass/sass, Grunt, and brackets text editor.
 
 ------
-##Change Log:
+##Change Log: 
+
+2014/10/07: "what ifs"
+
+- refined `loop-home.php` 
+	- added conditional styling elements
+
 
 2014/10/07: "Do-si-do" 
 
