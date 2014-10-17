@@ -30,11 +30,11 @@ $base-font-family: $bodyCopy;
   
 
 // color scheme
-$cr-background: #BDBE8E;
-$cr-primary: #2D4857;
-$cr-secondary: #4F7268;
-$cr-contrast: #140C41;
-$cr-highlight: #F0D69B;
+$cr-background: #fff;
+$cr-primary: #000;
+$cr-secondary: #777;
+$cr-contrast: #f00;
+$cr-highlight: #ff0;
 
 
 
@@ -75,7 +75,7 @@ $browser-minimum-versions: ( // this suddenly doesn't work... why?
     @return $usage > $threshold;
   }
 }
-* {box-sizing: border-box;}
+//* {box-sizing: border-box;}
 
 // Mix-in lib
 @import "compass/support";

@@ -1,7 +1,4 @@
 <?php 
-
-get_header(); 
-
 /*
 *	single post template 
 *
@@ -9,13 +6,15 @@ get_header();
 *
 */
 
+get_header(); 
+
 // query
 if (have_posts()) : 
 
 // loop
 while (have_posts()) : the_post();
 
-// sepreate file.
+// seperate file.
 get_template_part('content','single');
 
 // end loop

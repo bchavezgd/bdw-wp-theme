@@ -36,6 +36,20 @@ index.php
 		?>
 				<p>Not Found</p>
 				<p>sorry blah blah blah, whatever you're looking for doesn't exist</p>
+	
+<?php 
+get_search_form();
+endif; ?>
+	<?php 
+get_header();
+// if it is a search result
+if(is_search()): ?>
+<section class="page-header">
+	<h2 class="page-title">
+		you searched for:<br>
+		<span><?php the_search_query(); ?></span>
+	</h2>
+</section>
 <?php endif; ?>
 </main>
 <?php get_sidebar(); get_footer(); ?>

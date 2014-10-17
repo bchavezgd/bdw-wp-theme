@@ -1,1 +1,13 @@
 // custom mix-ins and functions. 
+
+@mixin group {
+	zoom: 1;
+	&:after {
+		clear: both;
+	}
+	&:before, 
+	&:after {
+		content: " ";
+		display: table;
+	}
+}

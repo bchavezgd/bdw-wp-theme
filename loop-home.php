@@ -14,6 +14,7 @@
 $do_not_duplicate=null; 
 
 /* FRUITLOOPS */
+
 // featured post loop arguments.		
 $featured=array(  
 	'showposts' => 2, 
@@ -48,6 +49,7 @@ echo '</section>';
 // restarts loop.
 wp_reset_postdata(); 
 
+echo '<div class="row">';
 
 // loop arguments
 $second=array( 
@@ -59,7 +61,6 @@ $second_loop=new WP_query($second);
 
 if($second_loop->have_posts()):
 
-echo '<div class="row">';
 // second loop
 echo '<section class="second-loop"><h2>Latest Stuff:</h2>';
 
@@ -96,12 +97,16 @@ $third = array(
 	'category_name' => 'things',
 	'showposts' => 1
 );
-// query
+
+// applying arguments to query
 $third_loop=new WP_query($third);
 
-// third loop 
+// query 
 if($third_loop->have_posts()):
+
+// loop wrap
 echo '<section class="third-loop"><h2>Latest things:</h2>';
+
 // loop
 while($third_loop->have_posts()): $third_loop->the_post(); 
 
@@ -121,14 +126,16 @@ $do_not_duplicate[]=$post->ID;
 // end loop
 endwhile;
 endif;
+
 // end second loop
 echo '</section><!-- end third-loop -->';
 
 echo '</div><!-- end row -->';
 
-
 // restarts loop
 wp_reset_postdata(); 
+
+
 // main loop 
 
 // loop, no query
@@ -144,31 +151,22 @@ update_post_caches($posts);
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 <div class="the_content">	
 <?php 
-	// adds thumbnails for posts.
-		if(has_post_thumbnail()) {
-			echo '<figure>';
-			the_post_thumbnail('thumbnail');
-			echo '</figure>';
-		};
+	
+// gets template part, cascades until it finds a correct one.
+
+	// adds thumbnails for posts
 	// adding post formats 
-		if(has_post_format('aside'))
-		{
-			echo the_content();
-		}
-		elseif(has_post_format('chat'))
-		{
-			echo '<h3 class="title">';
-			echo the_title();
-			echo '</h3>';
-			echo the_content();
-		}
-		elseif(has_post_format('gallery'))
+
+
+
+		if(has_post_format('chat') or has_post_format('gallery') or has_post_format('link'))
 		{
 			echo '<h3 class="title">';
 			echo the_title();
 			echo '</h3>';
 			echo the_content();
 		}
+	
 		elseif(has_post_format('image')) 
 		{
 			echo '<h3 class="title">';
@@ -177,35 +175,19 @@ update_post_caches($posts);
 			echo the_post_thumbnail('image-format');
 			echo the_content();
 		}
-		elseif(has_post_format('link'))
+
+		elseif(has_post_format('aside') or has_post_format('quote') or has_post_format('status'))
+		{
+			echo the_content();
+		}
+		elseif(has_post_format('video') or has_post_format('audio'))
 		{
 			echo '<h3 class="title">';
 			echo the_title();
 			echo '</h3>';
 			echo the_content();
 		}
-		elseif(has_post_format('quote'))
-		{
-			echo the_content();
-		}
-		elseif(has_post_format('status'))
-		{
-			echo the_content();
-		}
-		elseif(has_post_format('video'))
-		{
-			echo '<h3 class="title">';
-			echo the_title();
-			echo '</h3>';
-			echo the_content();
-		}
-		elseif(has_post_format('audio'))
-		{
-			echo '<h3 class="title">';
-			echo the_title();
-			echo '</h3>';
-			echo the_content();
-		}
+
 		else { 
 // if no other post types are present, 
 // displays standard post type

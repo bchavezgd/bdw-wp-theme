@@ -1,13 +1,12 @@
 // layout elements
 header {
-	display: block;
 	height: 50vh;
 	background: $cr-background;
 	background-size: cover;
 	background-position: center center;
 	&:before {
 		filter: blur(10px);
-		content: " ";
+		content: "";
 	}
 }
 .masthead {
@@ -23,13 +22,8 @@ section {
 	width: 100%;
 }
 
-.entry {
-	width: 61%;
-	max-width: 66rem;
-	min-width: 33rem;
-}
 .row {
-	background-color: darken($cr-primary, 20% );
+	background-color: $cr-primary;
 	&:after {
 		clear: both;
 		content: " ";
@@ -53,9 +47,11 @@ section {
 }
 /* article settings */
 main {
+	@include group;
 	max-width: 100%;
 }
 article {
+	@include group;
   img {
     max-width: 100%;
     height: auto;
@@ -63,14 +59,15 @@ article {
 }
 
 .content {
+	@include group;
+	border-bottom: 3px solid $cr-contrast;
 	img {
 	}
-	&>p:first-of-type {
+	&>p:first-of-type:first-line {
 		@include adjust-font-size-to($base-font-size * $phi);
 	}
 	&:last-child {
 		@include trailer(3);
-		@include trailing-border(1,1,0,solid);
 	}
 }
 // featured loop styling
@@ -94,4 +91,66 @@ article {
 	color: $cr-contrast;
 	padding: rhythm(1);
 }
+ 
+// menus
 
+nav { 
+	.sub-menu {
+		visibility: hidden;
+		height: 0;
+		width: 100%;
+	}
+	ul {
+		margin: 0;
+		}
+		li {
+			display: inline;
+			margin-right: rhythm(1);
+		}
+	}
+
+.menu {
+	padding: 0;
+	&:hover > .sub-menu {
+		visibility: visible;
+		height: rhythm(2);
+		width: 100%;
+	}
+}
+/* comments */
+
+div.comments {
+	// wrapper for comments. 
+	@include trailer(1);
+	width: 100%;
+	height: auto;
+	
+	
+}
+.nopassword {
+	// if post is password protected. 
+	// create box shadow with round corners. 
+}
+h2.comment-title {
+	// titles for comments. 
+	
+}
+.comment-nav-above {
+	
+}
+.comment-nav-below {
+	
+}
+.nav-previous {
+	
+}
+.nav-next {
+	
+}
+
+/* 404 */
+.no-results {}
+.not-found {}
+
+/* search results */
+.page-header {}

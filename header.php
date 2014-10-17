@@ -32,25 +32,21 @@
 	
 	<body <?php body_class(); ?> >
 		<div class="wrapper cf">
-			<?php
-$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
-			?>
-			<header style="background-image: url('<?php echo $src[0]; ?>');">
-			<div class="masthead">
-				<h1>
+<header>
+	<div class="masthead">
+		<h1>
 					<a href="<?php bloginfo('url'); ?>" id="site_name" >
 						<?php bloginfo('name'); ?>
 					</a>
 				</h1>
-				<p>
-					<?php bloginfo('description'); // tagline ?>
-				</p>
-			</div><!-- end masthead -->
-		
-			<nav>
-				<!--<ul>-->
-					<?php wp_nav_menu(); ?>
-				<!--</ul>-->
-			</nav>
-			
-		</header>
+		<p>
+			<?php bloginfo( 'description'); ?>
+		</p>
+	</div>
+	<!-- end masthead -->
+
+	<nav class="top">
+		<?php wp_nav_menu(); ?>
+	</nav>
+
+</header>

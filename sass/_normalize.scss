@@ -43,6 +43,7 @@ body {
  * not defined on `summary` and `details` in IE and Firefox and on `main` in IE.
  */
 
+div,
 article,
 aside,
 details,
@@ -53,7 +54,8 @@ main,
 nav,
 section,
 summary {
-  display: block;
+	display: block;
+	box-sizing: border-box;
 }
 
 /**

@@ -6,13 +6,15 @@ Template Name: Archives
 
 <main class="content">
 	<?php the_post(); ?>
-	<h1 class="title"><?php the_title(); ?></h1>
+	<h2 class="title">
+		<?php the_title(); ?>
+	</h2>
 	<?php get_search_form(); ?>
-	<h2>Archives by Month:</h2>
+	<h3>Archives by Month:</h3>
 	<ul>
 		<?php wp_get_archives( 'type=monthly'); ?>
 	</ul>
-	<h2>Archives by Subject:</h2>
+	<h3>Archives by Subject:</h3>
 	<ul>
 		<?php wp_list_categories(); ?>
 	</ul>
