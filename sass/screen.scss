@@ -42,8 +42,12 @@ $cr-highlight: #ff0;
 // remove support for IE 7 and earlier, set $browser-minimum-versions['ie']
 // to '8'.
 
-$browser-minimum-versions: ( // this suddenly doesn't work... why?
-	// well it works but not in windows 7? 
+$browser-minimum-versions: ( 
+	// this suddenly doesn't work... why?
+	// this creates an error when working in win7 
+	// but works totally fine when working in win8 
+	// updated grunt-contrib-compass,
+	// did not fix issue. 
 	'chrome':  null,
 	'firefox': null,
 	'ie':      '9',

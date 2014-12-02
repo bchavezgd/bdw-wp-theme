@@ -16,6 +16,9 @@ module.exports = function (grunt) {
 				livereload: true
 			}
 		},
+		// end watch
+		
+		
 		uglify: {},
 		// make a zipfile
 		compress: {
@@ -41,7 +44,11 @@ module.exports = function (grunt) {
 					]
 			}
 		},
+		
+		
 		imagemin: {},
+		
+		
 		compass: {
 			dev: {
 				options: {
@@ -57,12 +64,16 @@ module.exports = function (grunt) {
 			}
 			}
 		},
+		
+		
 		concat: {
 			css: {
 				src: ['sass/lib/wp-banner.css','sass/lib/prefixed.css'], 
 				dest: 'style.css'
 			}
 		},
+		
+		
 		autoprefixer: {
 			css: {
 				src: ['sass/lib/screen.css'],
@@ -89,7 +100,9 @@ module.exports = function (grunt) {
 
   // Default task(s).
 	grunt.registerTask('default', ['uglify','compass:dev']);
+	
 	grunt.registerTask('refresh', ['compass:dev', 'concat:css']);
+	
 	grunt.registerTask('done', ['compass:prod', 'autoprefixer', 'concat', 'compress:prod'])
 
 };
