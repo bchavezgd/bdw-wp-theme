@@ -63,12 +63,8 @@ article {
 	border-bottom: 3px solid $cr-contrast;
 	img {
 	}
-	&>p:first-of-type:first-line {
-		@include adjust-font-size-to($base-font-size * $phi);
-	}
-	&:last-child {
-		@include trailer(3);
-	}
+	&>p:first-of-type:first-line {	}
+	&:last-child {	}
 }
 // featured loop styling
 .featured {
@@ -77,19 +73,19 @@ article {
 	height: auto;
 	background-color: $cr-secondary;
 	color: $cr-highlight;
-	padding: rhythm(1);
+	padding: 1em;
 }
 .second-loop {
 	float: left;
 	width: 50%;
 	color: $cr-contrast;
-	padding: rhythm(1);
+	padding: 1em;
 }
 .third-loop {
 	float: left;
 	width: 50%;
 	color: $cr-contrast;
-	padding: rhythm(1);
+	padding: 1em;
 }
  
 // menus
@@ -105,7 +101,7 @@ nav {
 		}
 		li {
 			display: inline;
-			margin-right: rhythm(1);
+			margin-right: 1em;
 		}
 	}
 
@@ -113,7 +109,7 @@ nav {
 	padding: 0;
 	&:hover > .sub-menu {
 		visibility: visible;
-		height: rhythm(2);
+		height: 2em;
 		width: 100%;
 	}
 }
@@ -121,7 +117,6 @@ nav {
 
 div.comments {
 	// wrapper for comments. 
-	@include trailer(1);
 	width: 100%;
 	height: auto;
 	

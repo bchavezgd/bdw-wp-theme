@@ -37,58 +37,11 @@ $cr-contrast: #f00;
 $cr-highlight: #ff0;
 
 
-
-// Optional map of minimum browser versions to support. For example, to
-// remove support for IE 7 and earlier, set $browser-minimum-versions['ie']
-// to '8'.
-
-$browser-minimum-versions: ( 
-	// this suddenly doesn't work... why?
-	// this creates an error when working in win7 
-	// but works totally fine when working in win8 
-	// updated grunt-contrib-compass,
-	// did not fix issue. 
-	'chrome':  null,
-	'firefox': null,
-	'ie':      '9',
-	'safari':  null,
-	'opera':   null
-);
-
-
-// To work around a bug in compass-core 1.0.0-alpha.17, we override Compass'
-// support-legacy-browser() function with a version of our own.
-// @TODO Remove this monkey patch after it's fixed in Compass.
-// @see https://github.com/chriseppstein/compass/pull/1524
-// @see also https://github.com/chriseppstein/compass/pull/1520
-
-
-@function support-legacy-browser($browser, $min-version, $max-version: null, $threshold: $critical-usage-threshold) {
-  @if not index($supported-browsers, $browser) {
-    @return false;
-  }
-  // Check against declared minimums.
-  $min-required-version: map-get($browser-minimum-versions, $browser);
-  @if $min-required-version {
-    @return compare-browser-versions($browser, $max-version or $min-version, $min-required-version) >= 0;
-  } @else {
-    // Check against usage stats.
-    $usage: if($max-version,
-               omitted-usage($browser, $min-version, $max-version),
-               omitted-usage($browser, $min-version));
-    @return $usage > $threshold;
-  }
-}
-//* {box-sizing: border-box;}
-
 // Mix-in lib
-@import "compass/support";
-@import "compass/css3/box-sizing";
-@import "compass/typography/vertical_rhythm";
 @import "molotov";
 
 /* reset / normalize */
-@import 'normalize';
+//@import 'normalize';
 
 /* type settings */
 @import 'type';
@@ -99,4 +52,3 @@ $browser-minimum-versions: (
 
 /* content settings */
 @import 'content';
-

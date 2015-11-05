@@ -30,7 +30,6 @@ dl {
 }
 
 dl dt {
-  @include adjust-font-size-to(0.875rem);
   font-weight: 700;
   font-style: italic;
   padding: 0;
@@ -130,7 +129,6 @@ kbd {
    */
 
   blockquote {
-	@include trailer(1);
 	margin-left: $indent-amount;
 	border-left: 4px solid $cr-secondary;
 	padding: 0 15px;

@@ -2,10 +2,11 @@
 <footer id="footer">
 	<p>
 		&copy; Copyright <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>. All rights Reserved
-	</p>
+  </p>
+  <?php wp_footer(); ?>
 </footer>
 
-<?php wp_footer(); ?><!-- end footer -->
+<!-- end footer -->
 </div><!-- end wrapper -->
 </body>
 </html>

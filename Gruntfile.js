@@ -6,14 +6,8 @@ module.exports = function (grunt) {
 	// load plugin options and stuff. 
 		watch: {
 			sass: {
-				files: ['sass/*.scss','sass/*.sass'],
-				tasks: ['compass:dev', 'autoprefixer:css', 'concat:css']
-			},
-			php: {
-				files: ['*.php']
-			},
-			options: {
-				livereload: true
+				files: ['sass/*.sass', './sass/*.scss'],
+				tasks: ['sass', 'autoprefixer:css', 'concat:css']
 			}
 		},
 		// end watch
@@ -49,26 +43,24 @@ module.exports = function (grunt) {
 		imagemin: {},
 		
 		
-		compass: {
-			dev: {
-				options: {
-					config: 'sass/config.rb',
-					cssDir: 'sass/lib'
-				},
-			prod: {
-				options: {
-					config: 'sass/config.rb',
-					cssDir: 'sass/lib',
-					outputStyle: 'compact'
+		sass: {
+			
+			options: {
+				outputStyle: 'expanded'
+			},
+			
+			dist: {
+				files: {
+					'./sass/lib/screen.css': './sass/screen.scss'
 				}
-			}
 			}
 		},
 		
 		
+		
 		concat: {
 			css: {
-				src: ['sass/lib/wp-banner.css','sass/lib/prefixed.css'], 
+				src: ['./sass/lib/wp-banner.css','./sass/lib/prefixed.css'], 
 				dest: 'style.css'
 			}
 		},
@@ -76,7 +68,7 @@ module.exports = function (grunt) {
 		
 		autoprefixer: {
 			css: {
-				src: ['sass/lib/screen.css'],
+				src: 'sass/lib/screen.css',
 				dest: 'sass/lib/prefixed.css'
 			}
 		}
@@ -97,12 +89,13 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-compress');
 	// prefixer
 	grunt.loadNpmTasks('grunt-autoprefixer');
+	grunt.loadNpmTasks('grunt-sass');
 
   // Default task(s).
-	grunt.registerTask('default', ['uglify','compass:dev']);
+	//grunt.registerTask('default', ['uglify','compass:dev']);
 	
-	grunt.registerTask('refresh', ['compass:dev', 'concat:css']);
+	grunt.registerTask('default', ['sass', 'autoprefixer', 'concat']);
 	
-	grunt.registerTask('done', ['compass:prod', 'autoprefixer', 'concat', 'compress:prod'])
+	grunt.registerTask('done', ['sass', 'autoprefixer', 'concat', 'compress:prod'])
 
 };
