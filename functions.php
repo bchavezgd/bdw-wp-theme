@@ -35,7 +35,7 @@ if (!function_exists('bdw_setup')) :
   }
   // end bdw setup
 
-  endif;
+endif;
 
 add_action('after_setup_theme', 'bdw_setup');
 
